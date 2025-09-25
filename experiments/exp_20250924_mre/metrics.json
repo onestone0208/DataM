@@ -1,0 +1,14 @@
+﻿{
+  "target": "Leaf_TPC",
+  "n_samples": 135,
+  "n_features": 19,
+  "cv": "KFold(n_splits=5, shuffle=True, random_state=42)",
+  "metrics": {
+    "MAE_mean": 0.5573793397507052,
+    "MAE_std": 0.04497281463008568,
+    "MSE_mean": 0.38196725768321516,
+    "MSE_std": 0.058693079020913703,
+    "R2_mean": 0.20440509362505335,
+    "R2_std": 0.04596065559560122
+  }
+}
