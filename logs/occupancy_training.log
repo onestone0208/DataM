@@ -1,0 +1,73 @@
+2025-11-14 01:44:41,167 - DCRNN-Occupancy - INFO - 혼잡도 전용 데이터셋 로드 중...
+2025-11-14 01:44:54,492 - DCRNN-Occupancy - INFO - Train batches: 64
+2025-11-14 01:44:54,492 - DCRNN-Occupancy - INFO - Val batches: 14
+2025-11-14 01:44:54,495 - DCRNN-Occupancy - INFO - 혼잡도 전용 DCRNN 모델 구성 중...
+2025-11-14 01:44:54,497 - DCRNN-Occupancy - INFO - Total parameters: 453,826
+2025-11-14 01:44:54,497 - DCRNN-Occupancy - INFO - Trainable parameters: 453,826
+2025-11-14 01:44:54,982 - DCRNN-Occupancy - INFO - 혼잡도 모델 훈련 설정 완료
+2025-11-14 01:44:54,982 - DCRNN-Occupancy - INFO - 혼잡도 모델 훈련 시작...
+2025-11-14 01:44:54,982 - DCRNN-Occupancy - INFO - 총 200 에포크 훈련 예정
+2025-11-14 01:44:54,982 - DCRNN-Occupancy - INFO - 디바이스: cpu
+/Users/lee/Desktop/Project/Dague_Subtrain/.venv/lib/python3.10/site-packages/torch/utils/data/dataloader.py:692: UserWarning: 'pin_memory' argument is set as true but not supported on MPS now, device pinned memory won't be used.
+  warnings.warn(warn_msg)
+Using device: cpu
+Dataset 생성 완료:
+  - 시퀀스 수: 2040
+  - 입력 길이: 12시간
+  - 예측 길이: 1시간
+  - 역 수: 22개
+  - 타깃: ['occupancy']
+📊 Log1p + 정규화 통계 계산 중...
+  📈 원본 범위: [0.0, 2873.4]명
+  📈 Log1p 범위: [0.000, 7.964]
+  📈 정규화 통계: mean=2.002, std=2.105
+Dataset 생성 완료:
+  - 시퀀스 수: 432
+  - 입력 길이: 12시간
+  - 예측 길이: 1시간
+  - 역 수: 22개
+  - 타깃: ['occupancy']
+📊 Log1p + 정규화 통계 계산 중...
+  📈 원본 범위: [0.0, 1341.2]명
+  📈 Log1p 범위: [0.000, 7.202]
+  📈 정규화 통계: mean=2.011, std=2.092
+2025-11-14 01:45:00,631 - DCRNN-Occupancy - INFO - 첫 배치 처리 시작 - X shape: torch.Size([32, 12, 22, 1]), Y shape: torch.Size([32, 22, 1])
+2025-11-14 01:45:00,960 - DCRNN-Occupancy - INFO - Epoch 0, Batch 0/64, Loss: 0.9931, TF Ratio: 1.000
+2025-11-14 01:45:11,458 - DCRNN-Occupancy - INFO - Epoch 0, Batch 50/64, Loss: 0.0676, TF Ratio: 1.000
+2025-11-14 01:45:19,849 - DCRNN-Occupancy - INFO - Epoch 0: Train Loss: 0.1717, Val Loss: 1.0244, LR: 0.002000, Time: 24.9s
+2025-11-14 01:45:19,850 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-1.94, 2.38]
+2025-11-14 01:45:19,850 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.9, 1115.4]명
+2025-11-14 01:45:19,873 - DCRNN-Occupancy - INFO - Best occupancy model saved: checkpoints/occupancy_model/best_occupancy_model.pth
+2025-11-14 01:45:19,895 - DCRNN-Occupancy - INFO - Best occupancy model saved: checkpoints/occupancy_model/best_occupancy_model.pth
+2025-11-14 01:45:25,396 - DCRNN-Occupancy - INFO - Epoch 1, Batch 0/64, Loss: 0.0676, TF Ratio: 1.000
+2025-11-14 01:45:35,526 - DCRNN-Occupancy - INFO - Epoch 1, Batch 50/64, Loss: 0.0724, TF Ratio: 1.000
+2025-11-14 01:45:43,862 - DCRNN-Occupancy - INFO - Epoch 1: Train Loss: 0.0531, Val Loss: 1.0332, LR: 0.001998, Time: 24.0s
+2025-11-14 01:45:43,862 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-1.09, 2.49]
+2025-11-14 01:45:43,862 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.3, 1394.3]명
+2025-11-14 01:45:49,040 - DCRNN-Occupancy - INFO - Epoch 2, Batch 0/64, Loss: 0.0381, TF Ratio: 0.999
+2025-11-14 01:45:57,675 - DCRNN-Occupancy - INFO - Epoch 2, Batch 50/64, Loss: 0.0377, TF Ratio: 0.999
+2025-11-14 01:46:04,949 - DCRNN-Occupancy - INFO - Epoch 2: Train Loss: 0.0409, Val Loss: 1.0243, LR: 0.001996, Time: 21.1s
+2025-11-14 01:46:04,949 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-1.04, 2.51]
+2025-11-14 01:46:04,949 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.2, 1470.3]명
+2025-11-14 01:46:04,966 - DCRNN-Occupancy - INFO - Best occupancy model saved: checkpoints/occupancy_model/best_occupancy_model.pth
+2025-11-14 01:46:09,560 - DCRNN-Occupancy - INFO - Epoch 3, Batch 0/64, Loss: 0.0366, TF Ratio: 0.998
+2025-11-14 01:46:17,735 - DCRNN-Occupancy - INFO - Epoch 3, Batch 50/64, Loss: 0.0394, TF Ratio: 0.998
+2025-11-14 01:46:25,829 - DCRNN-Occupancy - INFO - Epoch 3: Train Loss: 0.0351, Val Loss: 1.0387, LR: 0.001992, Time: 20.9s
+2025-11-14 01:46:25,829 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-1.01, 2.50]
+2025-11-14 01:46:25,829 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.1, 1419.0]명
+2025-11-14 01:46:30,756 - DCRNN-Occupancy - INFO - Epoch 4, Batch 0/64, Loss: 0.0311, TF Ratio: 0.997
+2025-11-14 01:46:39,836 - DCRNN-Occupancy - INFO - Epoch 4, Batch 50/64, Loss: 0.0353, TF Ratio: 0.997
+2025-11-14 01:46:47,234 - DCRNN-Occupancy - INFO - Epoch 4: Train Loss: 0.0329, Val Loss: 1.0451, LR: 0.001988, Time: 21.4s
+2025-11-14 01:46:47,235 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-1.01, 2.51]
+2025-11-14 01:46:47,235 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.1, 1446.2]명
+2025-11-14 01:46:51,937 - DCRNN-Occupancy - INFO - Epoch 5, Batch 0/64, Loss: 0.0319, TF Ratio: 0.995
+2025-11-14 01:47:00,657 - DCRNN-Occupancy - INFO - Epoch 5, Batch 50/64, Loss: 0.0299, TF Ratio: 0.995
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/multiprocessing/spawn.py", line 116, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/multiprocessing/spawn.py", line 126, in _main
+    self = reduction.pickle.load(from_parent)
+_pickle.UnpicklingError: pickle data was truncated
+/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 17 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '

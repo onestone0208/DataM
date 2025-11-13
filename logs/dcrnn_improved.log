@@ -1,0 +1,6 @@
+2025-11-14 00:58:08,263 - DCRNN-Improved - INFO - 실험 시작: dcrnn_improved
+2025-11-14 00:58:08,263 - DCRNN-Improved - INFO - 설정 파일: config/model_config_improved.yaml
+2025-11-14 00:58:08,263 - DCRNN-Improved - INFO - 디바이스: cpu
+2025-11-14 00:58:08,264 - DCRNN-Improved - INFO - 데이터셋 로드 중...
+2025-11-14 00:58:08,700 - DCRNN-Improved - INFO - 기존 데이터셋 로드 성공
+2025-11-14 00:58:08,700 - DCRNN-Improved - INFO - 데이터 정규화 통계 계산 중...

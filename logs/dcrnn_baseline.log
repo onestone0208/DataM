@@ -1,0 +1,322 @@
+2025-11-14 00:03:59,479 - DCRNN - INFO - Loading datasets...
+2025-11-14 00:04:39,973 - DCRNN - INFO - Loading datasets...
+2025-11-14 00:04:40,379 - DCRNN - INFO - Train batches: 68
+2025-11-14 00:04:40,380 - DCRNN - INFO - Val batches: 12
+2025-11-14 00:04:40,380 - DCRNN - INFO - Building DCRNN model...
+2025-11-14 00:04:40,401 - DCRNN - INFO - Total parameters: 456,260
+2025-11-14 00:04:40,401 - DCRNN - INFO - Trainable parameters: 456,260
+2025-11-14 00:05:23,501 - DCRNN - INFO - Loading datasets...
+2025-11-14 00:05:23,880 - DCRNN - INFO - Train batches: 68
+2025-11-14 00:05:23,880 - DCRNN - INFO - Val batches: 12
+2025-11-14 00:05:23,880 - DCRNN - INFO - Building DCRNN model...
+2025-11-14 00:05:23,900 - DCRNN - INFO - Total parameters: 456,260
+2025-11-14 00:05:23,900 - DCRNN - INFO - Trainable parameters: 456,260
+2025-11-14 00:05:24,313 - DCRNN - INFO - Training setup completed
+2025-11-14 00:05:24,313 - DCRNN - INFO - Starting training...
+2025-11-14 00:06:14,792 - DCRNN - INFO - Loading datasets...
+2025-11-14 00:06:15,168 - DCRNN - WARNING - Cannot load existing datasets: 'pred_hour'
+2025-11-14 00:06:15,168 - DCRNN - INFO - Creating new datasets from raw data...
+2025-11-14 00:06:36,171 - DCRNN - INFO - Loading datasets...
+2025-11-14 00:06:36,543 - DCRNN - WARNING - Cannot load existing datasets: 'pred_hour'
+2025-11-14 00:06:36,543 - DCRNN - INFO - Creating new datasets from raw data...
+2025-11-14 00:06:37,474 - DCRNN - INFO - Train batches: 64
+2025-11-14 00:06:37,474 - DCRNN - INFO - Val batches: 14
+2025-11-14 00:06:37,474 - DCRNN - INFO - Building DCRNN model...
+2025-11-14 00:06:37,494 - DCRNN - INFO - Total parameters: 456,260
+2025-11-14 00:06:37,494 - DCRNN - INFO - Trainable parameters: 456,260
+2025-11-14 00:06:37,984 - DCRNN - INFO - Training setup completed
+2025-11-14 00:06:37,984 - DCRNN - INFO - Starting training...
+2025-11-14 00:06:45,716 - DCRNN - INFO - Epoch 0, Batch 0/64, Loss: 294.3366, TF Ratio: 1.000
+2025-11-14 00:10:37,687 - DCRNN - INFO - Loading datasets...
+2025-11-14 00:10:38,073 - DCRNN - WARNING - Cannot load existing datasets: 'pred_hour'
+2025-11-14 00:10:38,073 - DCRNN - INFO - Creating new datasets from raw data...
+2025-11-14 00:10:39,009 - DCRNN - INFO - Train batches: 255
+2025-11-14 00:10:39,009 - DCRNN - INFO - Val batches: 54
+2025-11-14 00:10:39,009 - DCRNN - INFO - Building DCRNN model...
+2025-11-14 00:10:39,022 - DCRNN - INFO - Total parameters: 28,516
+2025-11-14 00:10:39,022 - DCRNN - INFO - Trainable parameters: 28,516
+2025-11-14 00:10:39,412 - DCRNN - INFO - Training setup completed
+2025-11-14 00:10:39,412 - DCRNN - INFO - Starting training...
+2025-11-14 00:10:41,059 - DCRNN - INFO - Epoch 0, Batch 0/255, Loss: 284.8035, TF Ratio: 1.000
+2025-11-14 00:11:38,437 - DCRNN - INFO - Epoch 0, Batch 50/255, Loss: 66.6132, TF Ratio: 1.000
+2025-11-14 00:14:21,483 - DCRNN - INFO - Loading datasets...
+2025-11-14 00:14:21,891 - DCRNN - WARNING - Cannot load existing datasets: 'pred_hour'
+2025-11-14 00:14:21,891 - DCRNN - INFO - Creating new datasets from raw data...
+2025-11-14 00:14:22,844 - DCRNN - INFO - Train batches: 64
+2025-11-14 00:14:22,845 - DCRNN - INFO - Val batches: 14
+2025-11-14 00:14:22,845 - DCRNN - INFO - Building DCRNN model...
+2025-11-14 00:14:22,865 - DCRNN - INFO - Total parameters: 456,260
+2025-11-14 00:14:22,865 - DCRNN - INFO - Trainable parameters: 456,260
+2025-11-14 00:14:23,352 - DCRNN - INFO - Training setup completed
+2025-11-14 00:14:23,353 - DCRNN - INFO - Starting training...
+2025-11-14 00:14:28,122 - DCRNN - INFO - Epoch 0, Batch 0/64, Loss: 294.3366, TF Ratio: 1.000
+2025-11-14 00:15:37,742 - DCRNN - INFO - Loading datasets...
+2025-11-14 00:15:38,129 - DCRNN - WARNING - Cannot load existing datasets: 'pred_hour'
+2025-11-14 00:15:38,129 - DCRNN - INFO - Creating new datasets from raw data...
+2025-11-14 00:15:39,066 - DCRNN - INFO - Train batches: 64
+2025-11-14 00:15:39,066 - DCRNN - INFO - Val batches: 14
+2025-11-14 00:15:39,066 - DCRNN - INFO - Building DCRNN model...
+2025-11-14 00:15:39,068 - DCRNN - INFO - Total parameters: 456,260
+2025-11-14 00:15:39,068 - DCRNN - INFO - Trainable parameters: 456,260
+2025-11-14 00:15:39,568 - DCRNN - INFO - Training setup completed
+2025-11-14 00:15:39,568 - DCRNN - INFO - Starting training...
+2025-11-14 00:15:51,256 - DCRNN - INFO - Epoch 0, Batch 0/64, Loss: 294.3395, TF Ratio: 1.000
+2025-11-14 00:16:10,475 - DCRNN - INFO - Epoch 0, Batch 50/64, Loss: 73.4702, TF Ratio: 1.000
+2025-11-14 00:16:28,636 - DCRNN - INFO - Epoch 0: Train Loss: 103.9435, Val Loss: 74.0818, LR: 0.001000, Time: 49.1s
+2025-11-14 00:16:28,656 - DCRNN - INFO - Best model saved: checkpoints/best_model.pth
+2025-11-14 00:16:28,674 - DCRNN - INFO - Best model saved: checkpoints/best_model.pth
+2025-11-14 00:16:40,529 - DCRNN - INFO - Epoch 1, Batch 0/64, Loss: 72.9674, TF Ratio: 0.980
+2025-11-14 00:17:00,117 - DCRNN - INFO - Epoch 1, Batch 50/64, Loss: 80.7389, TF Ratio: 0.980
+2025-11-14 00:17:18,703 - DCRNN - INFO - Epoch 1: Train Loss: 74.6414, Val Loss: 73.1574, LR: 0.000999, Time: 50.0s
+2025-11-14 00:17:18,721 - DCRNN - INFO - Best model saved: checkpoints/best_model.pth
+2025-11-14 00:17:30,471 - DCRNN - INFO - Epoch 2, Batch 0/64, Loss: 82.1788, TF Ratio: 0.960
+2025-11-14 00:17:49,831 - DCRNN - INFO - Epoch 2, Batch 50/64, Loss: 73.8926, TF Ratio: 0.960
+2025-11-14 00:18:08,301 - DCRNN - INFO - Epoch 2: Train Loss: 73.4692, Val Loss: 72.0505, LR: 0.000998, Time: 49.6s
+2025-11-14 00:18:08,317 - DCRNN - INFO - Best model saved: checkpoints/best_model.pth
+2025-11-14 00:18:20,077 - DCRNN - INFO - Epoch 3, Batch 0/64, Loss: 75.6807, TF Ratio: 0.940
+2025-11-14 00:18:38,287 - DCRNN - INFO - Epoch 3, Batch 50/64, Loss: 71.3004, TF Ratio: 0.940
+2025-11-14 00:18:55,859 - DCRNN - INFO - Epoch 3: Train Loss: 72.2846, Val Loss: 71.2711, LR: 0.000996, Time: 47.5s
+2025-11-14 00:18:55,876 - DCRNN - INFO - Best model saved: checkpoints/best_model.pth
+2025-11-14 00:19:08,312 - DCRNN - INFO - Epoch 4, Batch 0/64, Loss: 68.4740, TF Ratio: 0.920
+2025-11-14 00:19:28,251 - DCRNN - INFO - Epoch 4, Batch 50/64, Loss: 59.7160, TF Ratio: 0.920
+2025-11-14 00:19:50,271 - DCRNN - INFO - Epoch 4: Train Loss: 70.9429, Val Loss: 70.8078, LR: 0.000994, Time: 54.4s
+2025-11-14 00:19:50,289 - DCRNN - INFO - Best model saved: checkpoints/best_model.pth
+2025-11-14 00:20:05,230 - DCRNN - INFO - Epoch 5, Batch 0/64, Loss: 78.1581, TF Ratio: 0.900
+2025-11-14 00:20:25,819 - DCRNN - INFO - Epoch 5, Batch 50/64, Loss: 71.7643, TF Ratio: 0.900
+2025-11-14 00:20:47,386 - DCRNN - INFO - Epoch 5: Train Loss: 70.5829, Val Loss: 70.1340, LR: 0.000991, Time: 57.1s
+2025-11-14 00:20:47,402 - DCRNN - INFO - Best model saved: checkpoints/best_model.pth
+2025-11-14 00:21:02,731 - DCRNN - INFO - Epoch 6, Batch 0/64, Loss: 67.8309, TF Ratio: 0.880
+2025-11-14 00:21:22,201 - DCRNN - INFO - Epoch 6, Batch 50/64, Loss: 61.3932, TF Ratio: 0.880
+2025-11-14 00:21:42,001 - DCRNN - INFO - Epoch 6: Train Loss: 70.0037, Val Loss: 69.4686, LR: 0.000988, Time: 54.6s
+2025-11-14 00:21:42,016 - DCRNN - INFO - Best model saved: checkpoints/best_model.pth
+2025-11-14 00:21:56,316 - DCRNN - INFO - Epoch 7, Batch 0/64, Loss: 67.2641, TF Ratio: 0.860
+2025-11-14 00:22:16,520 - DCRNN - INFO - Epoch 7, Batch 50/64, Loss: 70.4896, TF Ratio: 0.860
+2025-11-14 00:22:38,321 - DCRNN - INFO - Epoch 7: Train Loss: 69.1357, Val Loss: 68.9183, LR: 0.000984, Time: 56.3s
+2025-11-14 00:22:38,338 - DCRNN - INFO - Best model saved: checkpoints/best_model.pth
+2025-11-14 00:22:52,115 - DCRNN - INFO - Epoch 8, Batch 0/64, Loss: 52.4345, TF Ratio: 0.840
+2025-11-14 00:23:11,314 - DCRNN - INFO - Epoch 8, Batch 50/64, Loss: 73.6300, TF Ratio: 0.840
+2025-11-14 00:23:31,958 - DCRNN - INFO - Epoch 8: Train Loss: 68.3951, Val Loss: 68.3202, LR: 0.000980, Time: 53.6s
+2025-11-14 00:23:31,975 - DCRNN - INFO - Best model saved: checkpoints/best_model.pth
+2025-11-14 00:23:47,218 - DCRNN - INFO - Epoch 9, Batch 0/64, Loss: 67.5869, TF Ratio: 0.820
+2025-11-14 00:24:08,288 - DCRNN - INFO - Epoch 9, Batch 50/64, Loss: 66.0614, TF Ratio: 0.820
+2025-11-14 00:24:30,543 - DCRNN - INFO - Epoch 9: Train Loss: 67.8842, Val Loss: 68.0177, LR: 0.000976, Time: 58.6s
+2025-11-14 00:24:30,560 - DCRNN - INFO - Best model saved: checkpoints/best_model.pth
+2025-11-14 00:24:44,657 - DCRNN - INFO - Epoch 10, Batch 0/64, Loss: 64.9611, TF Ratio: 0.800
+2025-11-14 00:25:03,559 - DCRNN - INFO - Epoch 10, Batch 50/64, Loss: 67.6674, TF Ratio: 0.800
+2025-11-14 00:25:22,891 - DCRNN - INFO - Epoch 10: Train Loss: 67.3132, Val Loss: 67.5880, LR: 0.000970, Time: 52.3s
+2025-11-14 00:25:22,907 - DCRNN - INFO - Best model saved: checkpoints/best_model.pth
+2025-11-14 00:25:22,922 - DCRNN - INFO - Best model saved: checkpoints/best_model.pth
+2025-11-14 00:25:36,230 - DCRNN - INFO - Epoch 11, Batch 0/64, Loss: 75.3348, TF Ratio: 0.780
+2025-11-14 00:25:54,687 - DCRNN - INFO - Epoch 11, Batch 50/64, Loss: 72.6876, TF Ratio: 0.780
+2025-11-14 00:26:15,700 - DCRNN - INFO - Epoch 11: Train Loss: 67.0229, Val Loss: 67.3023, LR: 0.000965, Time: 52.8s
+2025-11-14 00:26:15,716 - DCRNN - INFO - Best model saved: checkpoints/best_model.pth
+2025-11-14 00:26:29,492 - DCRNN - INFO - Epoch 12, Batch 0/64, Loss: 54.7726, TF Ratio: 0.760
+2025-11-14 00:26:48,262 - DCRNN - INFO - Epoch 12, Batch 50/64, Loss: 68.0138, TF Ratio: 0.760
+2025-11-14 00:27:07,818 - DCRNN - INFO - Epoch 12: Train Loss: 66.4824, Val Loss: 66.8008, LR: 0.000959, Time: 52.1s
+2025-11-14 00:27:07,834 - DCRNN - INFO - Best model saved: checkpoints/best_model.pth
+2025-11-14 00:27:21,078 - DCRNN - INFO - Epoch 13, Batch 0/64, Loss: 65.1240, TF Ratio: 0.740
+2025-11-14 00:27:39,878 - DCRNN - INFO - Epoch 13, Batch 50/64, Loss: 71.3181, TF Ratio: 0.740
+2025-11-14 00:27:59,950 - DCRNN - INFO - Epoch 13: Train Loss: 66.2936, Val Loss: 66.5674, LR: 0.000952, Time: 52.1s
+2025-11-14 00:27:59,966 - DCRNN - INFO - Best model saved: checkpoints/best_model.pth
+2025-11-14 00:28:14,619 - DCRNN - INFO - Epoch 14, Batch 0/64, Loss: 63.9974, TF Ratio: 0.720
+2025-11-14 00:28:35,025 - DCRNN - INFO - Epoch 14, Batch 50/64, Loss: 57.0776, TF Ratio: 0.720
+2025-11-14 00:28:56,799 - DCRNN - INFO - Epoch 14: Train Loss: 65.7990, Val Loss: 66.2524, LR: 0.000946, Time: 56.8s
+2025-11-14 00:28:56,815 - DCRNN - INFO - Best model saved: checkpoints/best_model.pth
+2025-11-14 00:29:12,146 - DCRNN - INFO - Epoch 15, Batch 0/64, Loss: 55.4455, TF Ratio: 0.700
+2025-11-14 00:29:31,816 - DCRNN - INFO - Epoch 15, Batch 50/64, Loss: 60.1713, TF Ratio: 0.700
+2025-11-14 00:29:53,011 - DCRNN - INFO - Epoch 15: Train Loss: 65.2123, Val Loss: 65.5485, LR: 0.000938, Time: 56.2s
+2025-11-14 00:29:53,029 - DCRNN - INFO - Best model saved: checkpoints/best_model.pth
+2025-11-14 00:30:06,996 - DCRNN - INFO - Epoch 16, Batch 0/64, Loss: 60.6247, TF Ratio: 0.680
+2025-11-14 00:30:25,131 - DCRNN - INFO - Epoch 16, Batch 50/64, Loss: 69.5234, TF Ratio: 0.680
+2025-11-14 00:30:44,984 - DCRNN - INFO - Epoch 16: Train Loss: 64.9685, Val Loss: 65.3564, LR: 0.000930, Time: 52.0s
+2025-11-14 00:30:44,999 - DCRNN - INFO - Best model saved: checkpoints/best_model.pth
+2025-11-14 00:30:59,194 - DCRNN - INFO - Epoch 17, Batch 0/64, Loss: 70.8780, TF Ratio: 0.660
+2025-11-14 00:31:19,068 - DCRNN - INFO - Epoch 17, Batch 50/64, Loss: 65.1725, TF Ratio: 0.660
+2025-11-14 00:31:40,850 - DCRNN - INFO - Epoch 17: Train Loss: 64.8999, Val Loss: 65.0755, LR: 0.000922, Time: 55.9s
+2025-11-14 00:31:40,867 - DCRNN - INFO - Best model saved: checkpoints/best_model.pth
+2025-11-14 00:31:55,983 - DCRNN - INFO - Epoch 18, Batch 0/64, Loss: 68.9718, TF Ratio: 0.640
+2025-11-14 00:32:15,492 - DCRNN - INFO - Epoch 18, Batch 50/64, Loss: 72.0271, TF Ratio: 0.640
+2025-11-14 00:32:35,322 - DCRNN - INFO - Epoch 18: Train Loss: 64.8149, Val Loss: 64.8094, LR: 0.000914, Time: 54.5s
+2025-11-14 00:32:35,338 - DCRNN - INFO - Best model saved: checkpoints/best_model.pth
+2025-11-14 00:32:48,663 - DCRNN - INFO - Epoch 19, Batch 0/64, Loss: 56.6062, TF Ratio: 0.620
+2025-11-14 00:33:08,108 - DCRNN - INFO - Epoch 19, Batch 50/64, Loss: 74.3206, TF Ratio: 0.620
+2025-11-14 00:33:27,926 - DCRNN - INFO - Epoch 19: Train Loss: 64.7052, Val Loss: 64.7150, LR: 0.000905, Time: 52.6s
+2025-11-14 00:33:27,962 - DCRNN - INFO - Best model saved: checkpoints/best_model.pth
+2025-11-14 00:33:41,572 - DCRNN - INFO - Epoch 20, Batch 0/64, Loss: 61.8028, TF Ratio: 0.600
+2025-11-14 00:34:00,833 - DCRNN - INFO - Epoch 20, Batch 50/64, Loss: 62.7147, TF Ratio: 0.600
+2025-11-14 00:34:20,826 - DCRNN - INFO - Epoch 20: Train Loss: 64.6001, Val Loss: 64.4741, LR: 0.000895, Time: 52.9s
+2025-11-14 00:34:20,842 - DCRNN - INFO - Best model saved: checkpoints/best_model.pth
+2025-11-14 00:34:20,857 - DCRNN - INFO - Best model saved: checkpoints/best_model.pth
+2025-11-14 00:34:34,441 - DCRNN - INFO - Epoch 21, Batch 0/64, Loss: 62.8578, TF Ratio: 0.580
+2025-11-14 00:34:52,816 - DCRNN - INFO - Epoch 21, Batch 50/64, Loss: 63.5017, TF Ratio: 0.580
+2025-11-14 00:35:12,793 - DCRNN - INFO - Epoch 21: Train Loss: 64.2052, Val Loss: 64.3998, LR: 0.000885, Time: 51.9s
+2025-11-14 00:35:12,810 - DCRNN - INFO - Best model saved: checkpoints/best_model.pth
+2025-11-14 00:35:26,592 - DCRNN - INFO - Epoch 22, Batch 0/64, Loss: 67.5884, TF Ratio: 0.560
+2025-11-14 00:35:46,500 - DCRNN - INFO - Epoch 22, Batch 50/64, Loss: 51.8868, TF Ratio: 0.560
+2025-11-14 00:36:09,014 - DCRNN - INFO - Epoch 22: Train Loss: 64.1006, Val Loss: 64.2971, LR: 0.000875, Time: 56.2s
+2025-11-14 00:36:09,031 - DCRNN - INFO - Best model saved: checkpoints/best_model.pth
+2025-11-14 00:36:23,905 - DCRNN - INFO - Epoch 23, Batch 0/64, Loss: 61.5609, TF Ratio: 0.540
+2025-11-14 00:36:42,474 - DCRNN - INFO - Epoch 23, Batch 50/64, Loss: 57.1574, TF Ratio: 0.540
+2025-11-14 00:37:02,324 - DCRNN - INFO - Epoch 23: Train Loss: 63.2721, Val Loss: 63.3272, LR: 0.000865, Time: 53.3s
+2025-11-14 00:37:02,340 - DCRNN - INFO - Best model saved: checkpoints/best_model.pth
+2025-11-14 00:37:16,218 - DCRNN - INFO - Epoch 24, Batch 0/64, Loss: 61.9159, TF Ratio: 0.520
+2025-11-14 00:37:35,121 - DCRNN - INFO - Epoch 24, Batch 50/64, Loss: 66.7882, TF Ratio: 0.520
+2025-11-14 00:37:54,741 - DCRNN - INFO - Epoch 24: Train Loss: 63.3758, Val Loss: 63.3022, LR: 0.000854, Time: 52.4s
+2025-11-14 00:37:54,757 - DCRNN - INFO - Best model saved: checkpoints/best_model.pth
+2025-11-14 00:38:09,226 - DCRNN - INFO - Epoch 25, Batch 0/64, Loss: 68.7750, TF Ratio: 0.500
+2025-11-14 00:38:29,881 - DCRNN - INFO - Epoch 25, Batch 50/64, Loss: 72.3439, TF Ratio: 0.500
+2025-11-14 00:38:52,442 - DCRNN - INFO - Epoch 25: Train Loss: 63.3750, Val Loss: 63.1638, LR: 0.000842, Time: 57.7s
+2025-11-14 00:38:52,459 - DCRNN - INFO - Best model saved: checkpoints/best_model.pth
+2025-11-14 00:39:06,444 - DCRNN - INFO - Epoch 26, Batch 0/64, Loss: 68.3096, TF Ratio: 0.480
+2025-11-14 00:39:25,076 - DCRNN - INFO - Epoch 26, Batch 50/64, Loss: 72.3953, TF Ratio: 0.480
+2025-11-14 00:39:44,593 - DCRNN - INFO - Epoch 26: Train Loss: 62.8450, Val Loss: 62.9615, LR: 0.000831, Time: 52.1s
+2025-11-14 00:39:44,610 - DCRNN - INFO - Best model saved: checkpoints/best_model.pth
+2025-11-14 00:39:57,982 - DCRNN - INFO - Epoch 27, Batch 0/64, Loss: 60.7261, TF Ratio: 0.460
+2025-11-14 00:40:16,426 - DCRNN - INFO - Epoch 27, Batch 50/64, Loss: 81.0819, TF Ratio: 0.460
+2025-11-14 00:40:36,117 - DCRNN - INFO - Epoch 27: Train Loss: 63.2031, Val Loss: 63.2736, LR: 0.000819, Time: 51.5s
+2025-11-14 00:40:49,366 - DCRNN - INFO - Epoch 28, Batch 0/64, Loss: 59.2724, TF Ratio: 0.440
+2025-11-14 00:41:07,976 - DCRNN - INFO - Epoch 28, Batch 50/64, Loss: 75.4517, TF Ratio: 0.440
+2025-11-14 00:41:27,993 - DCRNN - INFO - Epoch 28: Train Loss: 63.0900, Val Loss: 62.7952, LR: 0.000807, Time: 51.9s
+2025-11-14 00:41:28,011 - DCRNN - INFO - Best model saved: checkpoints/best_model.pth
+2025-11-14 00:41:43,089 - DCRNN - INFO - Epoch 29, Batch 0/64, Loss: 65.5056, TF Ratio: 0.420
+2025-11-14 00:42:01,996 - DCRNN - INFO - Epoch 29, Batch 50/64, Loss: 60.2338, TF Ratio: 0.420
+2025-11-14 00:42:21,781 - DCRNN - INFO - Epoch 29: Train Loss: 63.0481, Val Loss: 62.7016, LR: 0.000794, Time: 53.8s
+2025-11-14 00:42:21,798 - DCRNN - INFO - Best model saved: checkpoints/best_model.pth
+2025-11-14 00:42:35,408 - DCRNN - INFO - Epoch 30, Batch 0/64, Loss: 72.0243, TF Ratio: 0.400
+2025-11-14 00:42:55,486 - DCRNN - INFO - Epoch 30, Batch 50/64, Loss: 66.8806, TF Ratio: 0.400
+2025-11-14 00:43:16,853 - DCRNN - INFO - Epoch 30: Train Loss: 63.2658, Val Loss: 62.9046, LR: 0.000781, Time: 55.1s
+2025-11-14 00:43:32,030 - DCRNN - INFO - Epoch 31, Batch 0/64, Loss: 68.9186, TF Ratio: 0.380
+2025-11-14 00:43:53,088 - DCRNN - INFO - Epoch 31, Batch 50/64, Loss: 53.8504, TF Ratio: 0.380
+2025-11-14 00:44:15,781 - DCRNN - INFO - Epoch 31: Train Loss: 63.0463, Val Loss: 62.3721, LR: 0.000768, Time: 58.9s
+2025-11-14 00:44:15,801 - DCRNN - INFO - Best model saved: checkpoints/best_model.pth
+2025-11-14 00:44:31,543 - DCRNN - INFO - Epoch 32, Batch 0/64, Loss: 65.0182, TF Ratio: 0.360
+2025-11-14 00:44:53,749 - DCRNN - INFO - Epoch 32, Batch 50/64, Loss: 57.8362, TF Ratio: 0.360
+2025-11-14 00:45:16,380 - DCRNN - INFO - Epoch 32: Train Loss: 63.1186, Val Loss: 62.2949, LR: 0.000755, Time: 60.6s
+2025-11-14 00:45:16,400 - DCRNN - INFO - Best model saved: checkpoints/best_model.pth
+2025-11-14 00:45:32,358 - DCRNN - INFO - Epoch 33, Batch 0/64, Loss: 58.3553, TF Ratio: 0.340
+2025-11-14 00:45:54,426 - DCRNN - INFO - Epoch 33, Batch 50/64, Loss: 59.1811, TF Ratio: 0.340
+2025-11-14 00:46:16,442 - DCRNN - INFO - Epoch 33: Train Loss: 63.0362, Val Loss: 62.0249, LR: 0.000741, Time: 60.0s
+2025-11-14 00:46:16,459 - DCRNN - INFO - Best model saved: checkpoints/best_model.pth
+2025-11-14 00:46:30,234 - DCRNN - INFO - Epoch 34, Batch 0/64, Loss: 56.7180, TF Ratio: 0.320
+2025-11-14 00:46:48,811 - DCRNN - INFO - Epoch 34, Batch 50/64, Loss: 73.0772, TF Ratio: 0.320
+2025-11-14 00:47:09,785 - DCRNN - INFO - Epoch 34: Train Loss: 62.8087, Val Loss: 61.9272, LR: 0.000727, Time: 53.3s
+2025-11-14 00:47:09,802 - DCRNN - INFO - Best model saved: checkpoints/best_model.pth
+2025-11-14 00:47:23,891 - DCRNN - INFO - Epoch 35, Batch 0/64, Loss: 53.5402, TF Ratio: 0.300
+2025-11-14 00:47:43,249 - DCRNN - INFO - Epoch 35, Batch 50/64, Loss: 51.7956, TF Ratio: 0.300
+2025-11-14 00:48:03,306 - DCRNN - INFO - Epoch 35: Train Loss: 62.2326, Val Loss: 61.5961, LR: 0.000713, Time: 53.5s
+2025-11-14 00:48:03,321 - DCRNN - INFO - Best model saved: checkpoints/best_model.pth
+2025-11-14 00:48:16,984 - DCRNN - INFO - Epoch 36, Batch 0/64, Loss: 69.9987, TF Ratio: 0.280
+2025-11-14 00:48:35,572 - DCRNN - INFO - Epoch 36, Batch 50/64, Loss: 63.5883, TF Ratio: 0.280
+2025-11-14 00:48:55,393 - DCRNN - INFO - Epoch 36: Train Loss: 62.5063, Val Loss: 61.4970, LR: 0.000699, Time: 52.1s
+2025-11-14 00:48:55,409 - DCRNN - INFO - Best model saved: checkpoints/best_model.pth
+2025-11-14 00:49:09,175 - DCRNN - INFO - Epoch 37, Batch 0/64, Loss: 48.1968, TF Ratio: 0.260
+2025-11-14 00:49:29,442 - DCRNN - INFO - Epoch 37, Batch 50/64, Loss: 59.4184, TF Ratio: 0.260
+2025-11-14 00:49:49,484 - DCRNN - INFO - Epoch 37: Train Loss: 62.6091, Val Loss: 61.5492, LR: 0.000684, Time: 54.1s
+2025-11-14 00:50:03,145 - DCRNN - INFO - Epoch 38, Batch 0/64, Loss: 69.2078, TF Ratio: 0.240
+2025-11-14 00:50:22,726 - DCRNN - INFO - Epoch 38, Batch 50/64, Loss: 58.3173, TF Ratio: 0.240
+2025-11-14 00:50:43,336 - DCRNN - INFO - Epoch 38: Train Loss: 62.2541, Val Loss: 61.1765, LR: 0.000670, Time: 53.9s
+2025-11-14 00:50:43,352 - DCRNN - INFO - Best model saved: checkpoints/best_model.pth
+2025-11-14 00:50:56,970 - DCRNN - INFO - Epoch 39, Batch 0/64, Loss: 73.0932, TF Ratio: 0.220
+2025-11-14 00:51:16,157 - DCRNN - INFO - Epoch 39, Batch 50/64, Loss: 58.1318, TF Ratio: 0.220
+2025-11-14 00:51:37,561 - DCRNN - INFO - Epoch 39: Train Loss: 62.3615, Val Loss: 61.1844, LR: 0.000655, Time: 54.2s
+2025-11-14 00:51:52,093 - DCRNN - INFO - Epoch 40, Batch 0/64, Loss: 54.6188, TF Ratio: 0.200
+2025-11-14 00:52:14,523 - DCRNN - INFO - Epoch 40, Batch 50/64, Loss: 55.4625, TF Ratio: 0.200
+2025-11-14 00:52:37,121 - DCRNN - INFO - Epoch 40: Train Loss: 62.4245, Val Loss: 61.1941, LR: 0.000640, Time: 59.6s
+2025-11-14 00:52:52,502 - DCRNN - INFO - Epoch 41, Batch 0/64, Loss: 63.5859, TF Ratio: 0.180
+2025-11-14 00:53:13,918 - DCRNN - INFO - Epoch 41, Batch 50/64, Loss: 64.6079, TF Ratio: 0.180
+2025-11-14 00:53:36,701 - DCRNN - INFO - Epoch 41: Train Loss: 62.6357, Val Loss: 61.0157, LR: 0.000625, Time: 59.6s
+2025-11-14 00:53:36,718 - DCRNN - INFO - Best model saved: checkpoints/best_model.pth
+2025-11-14 00:53:52,084 - DCRNN - INFO - Epoch 42, Batch 0/64, Loss: 66.8123, TF Ratio: 0.160
+2025-11-14 00:54:13,149 - DCRNN - INFO - Epoch 42, Batch 50/64, Loss: 71.4048, TF Ratio: 0.160
+2025-11-14 00:54:35,745 - DCRNN - INFO - Epoch 42: Train Loss: 62.6301, Val Loss: 60.8994, LR: 0.000609, Time: 59.0s
+2025-11-14 00:54:35,762 - DCRNN - INFO - Best model saved: checkpoints/best_model.pth
+2025-11-14 00:54:51,086 - DCRNN - INFO - Epoch 43, Batch 0/64, Loss: 57.8593, TF Ratio: 0.140
+2025-11-14 00:55:11,206 - DCRNN - INFO - Epoch 43, Batch 50/64, Loss: 60.1618, TF Ratio: 0.140
+2025-11-14 00:55:33,826 - DCRNN - INFO - Epoch 43: Train Loss: 62.3952, Val Loss: 60.6517, LR: 0.000594, Time: 58.1s
+2025-11-14 00:55:33,842 - DCRNN - INFO - Best model saved: checkpoints/best_model.pth
+2025-11-14 00:55:48,092 - DCRNN - INFO - Epoch 44, Batch 0/64, Loss: 50.5090, TF Ratio: 0.120
+2025-11-14 00:56:07,872 - DCRNN - INFO - Epoch 44, Batch 50/64, Loss: 58.9897, TF Ratio: 0.120
+2025-11-14 00:56:30,379 - DCRNN - INFO - Epoch 44: Train Loss: 62.5757, Val Loss: 60.8239, LR: 0.000579, Time: 56.5s
+2025-11-14 00:56:45,126 - DCRNN - INFO - Epoch 45, Batch 0/64, Loss: 56.6239, TF Ratio: 0.100
+2025-11-14 00:57:03,929 - DCRNN - INFO - Epoch 45, Batch 50/64, Loss: 68.8960, TF Ratio: 0.100
+2025-11-14 00:57:24,063 - DCRNN - INFO - Epoch 45: Train Loss: 62.3933, Val Loss: 60.4852, LR: 0.000563, Time: 53.7s
+2025-11-14 00:57:24,079 - DCRNN - INFO - Best model saved: checkpoints/best_model.pth
+2025-11-14 00:57:38,549 - DCRNN - INFO - Epoch 46, Batch 0/64, Loss: 63.4562, TF Ratio: 0.080
+2025-11-14 00:57:58,724 - DCRNN - INFO - Epoch 46, Batch 50/64, Loss: 52.4371, TF Ratio: 0.080
+2025-11-14 00:58:17,762 - DCRNN - INFO - Loading datasets...
+2025-11-14 00:58:18,248 - DCRNN - WARNING - Cannot load existing datasets: 'pred_hour'
+2025-11-14 00:58:18,248 - DCRNN - INFO - Creating new datasets from raw data...
+2025-11-14 00:58:19,626 - DCRNN - INFO - Train batches: 64
+2025-11-14 00:58:19,626 - DCRNN - INFO - Val batches: 14
+2025-11-14 00:58:19,626 - DCRNN - INFO - Building DCRNN model...
+2025-11-14 00:58:19,630 - DCRNN - INFO - Total parameters: 456,260
+2025-11-14 00:58:19,630 - DCRNN - INFO - Trainable parameters: 456,260
+2025-11-14 00:58:20,225 - DCRNN - INFO - Training setup completed
+2025-11-14 00:58:20,225 - DCRNN - INFO - Starting training...
+2025-11-14 00:58:20,390 - DCRNN - INFO - Epoch 46: Train Loss: 62.4846, Val Loss: 60.7852, LR: 0.000548, Time: 56.3s
+2025-11-14 00:58:35,202 - DCRNN - INFO - Epoch 0, Batch 0/64, Loss: 294.3395, TF Ratio: 1.000
+2025-11-14 00:58:35,234 - DCRNN - INFO - Epoch 47, Batch 0/64, Loss: 76.0229, TF Ratio: 0.060
+2025-11-14 00:58:57,427 - DCRNN - INFO - Epoch 0, Batch 50/64, Loss: 73.4702, TF Ratio: 1.000
+2025-11-14 00:58:57,672 - DCRNN - INFO - Epoch 47, Batch 50/64, Loss: 62.6119, TF Ratio: 0.060
+2025-11-14 00:59:20,752 - DCRNN - INFO - Epoch 0: Train Loss: 103.9435, Val Loss: 74.0818, LR: 0.001000, Time: 60.5s
+2025-11-14 00:59:20,776 - DCRNN - INFO - Best model saved: checkpoints/best_model.pth
+2025-11-14 00:59:20,795 - DCRNN - INFO - Best model saved: checkpoints/best_model.pth
+2025-11-14 00:59:21,188 - DCRNN - INFO - Epoch 47: Train Loss: 62.6475, Val Loss: 60.7215, LR: 0.000532, Time: 60.8s
+2025-11-14 00:59:21,308 - DCRNN - INFO - Loading datasets...
+2025-11-14 00:59:21,770 - DCRNN - WARNING - Cannot load existing datasets: 'pred_hour'
+2025-11-14 00:59:21,770 - DCRNN - INFO - Creating new datasets from raw data...
+2025-11-14 00:59:23,097 - DCRNN - INFO - Train batches: 64
+2025-11-14 00:59:23,097 - DCRNN - INFO - Val batches: 14
+2025-11-14 00:59:23,097 - DCRNN - INFO - Building DCRNN model...
+2025-11-14 00:59:23,098 - DCRNN - INFO - Total parameters: 456,260
+2025-11-14 00:59:23,098 - DCRNN - INFO - Trainable parameters: 456,260
+2025-11-14 00:59:23,594 - DCRNN - INFO - Training setup completed
+2025-11-14 00:59:23,594 - DCRNN - INFO - Starting training...
+2025-11-14 00:59:37,929 - DCRNN - INFO - Epoch 1, Batch 0/64, Loss: 72.9674, TF Ratio: 0.980
+2025-11-14 00:59:38,228 - DCRNN - INFO - Epoch 48, Batch 0/64, Loss: 75.0691, TF Ratio: 0.040
+2025-11-14 00:59:40,842 - DCRNN - INFO - Epoch 0, Batch 0/64, Loss: 294.3395, TF Ratio: 1.000
+2025-11-14 01:00:05,425 - DCRNN - INFO - Epoch 1, Batch 50/64, Loss: 80.7389, TF Ratio: 0.980
+2025-11-14 01:00:05,650 - DCRNN - INFO - Epoch 48, Batch 50/64, Loss: 51.1844, TF Ratio: 0.040
+2025-11-14 01:00:07,928 - DCRNN - INFO - Epoch 0, Batch 50/64, Loss: 73.4702, TF Ratio: 1.000
+2025-11-14 01:00:32,445 - DCRNN - INFO - Epoch 1: Train Loss: 74.6414, Val Loss: 73.1574, LR: 0.000999, Time: 71.7s
+2025-11-14 01:00:32,476 - DCRNN - INFO - Best model saved: checkpoints/best_model.pth
+2025-11-14 01:00:32,637 - DCRNN - INFO - Epoch 48: Train Loss: 62.5169, Val Loss: 60.4689, LR: 0.000516, Time: 71.4s
+2025-11-14 01:00:32,662 - DCRNN - INFO - Best model saved: checkpoints/best_model.pth
+2025-11-14 01:00:33,993 - DCRNN - INFO - Epoch 0: Train Loss: 103.9435, Val Loss: 74.0818, LR: 0.001000, Time: 70.4s
+2025-11-14 01:00:34,013 - DCRNN - INFO - Best model saved: checkpoints/best_model.pth
+2025-11-14 01:00:34,028 - DCRNN - INFO - Best model saved: checkpoints/best_model.pth
+2025-11-14 01:00:48,729 - DCRNN - INFO - Epoch 2, Batch 0/64, Loss: 82.1788, TF Ratio: 0.960
+2025-11-14 01:00:49,061 - DCRNN - INFO - Epoch 49, Batch 0/64, Loss: 51.7524, TF Ratio: 0.020
+2025-11-14 01:00:50,268 - DCRNN - INFO - Epoch 1, Batch 0/64, Loss: 72.9674, TF Ratio: 0.980
+2025-11-14 01:01:15,024 - DCRNN - INFO - Epoch 2, Batch 50/64, Loss: 73.8926, TF Ratio: 0.960
+2025-11-14 01:01:15,807 - DCRNN - INFO - Epoch 49, Batch 50/64, Loss: 55.0921, TF Ratio: 0.020
+2025-11-14 01:01:16,603 - DCRNN - INFO - Epoch 1, Batch 50/64, Loss: 80.7389, TF Ratio: 0.980
+2025-11-14 01:01:42,087 - DCRNN - INFO - Epoch 2: Train Loss: 73.4692, Val Loss: 72.0505, LR: 0.000998, Time: 69.6s
+2025-11-14 01:01:42,109 - DCRNN - INFO - Best model saved: checkpoints/best_model.pth
+2025-11-14 01:01:42,146 - DCRNN - INFO - Epoch 49: Train Loss: 62.4945, Val Loss: 60.2970, LR: 0.000501, Time: 69.5s
+2025-11-14 01:01:42,167 - DCRNN - INFO - Best model saved: checkpoints/best_model.pth
+2025-11-14 01:01:43,297 - DCRNN - INFO - Epoch 1: Train Loss: 74.6414, Val Loss: 73.1574, LR: 0.000999, Time: 69.3s
+2025-11-14 01:01:43,312 - DCRNN - INFO - Best model saved: checkpoints/best_model.pth
+2025-11-14 01:02:00,788 - DCRNN - INFO - Epoch 50, Batch 0/64, Loss: 59.6406, TF Ratio: 0.000
+2025-11-14 01:02:00,789 - DCRNN - INFO - Epoch 3, Batch 0/64, Loss: 75.6807, TF Ratio: 0.940
+2025-11-14 01:02:01,731 - DCRNN - INFO - Epoch 2, Batch 0/64, Loss: 82.1788, TF Ratio: 0.960
+2025-11-14 01:02:26,147 - DCRNN - INFO - Epoch 3, Batch 50/64, Loss: 71.3004, TF Ratio: 0.940
+2025-11-14 01:02:26,474 - DCRNN - INFO - Epoch 50, Batch 50/64, Loss: 59.9347, TF Ratio: 0.000
+2025-11-14 01:02:27,311 - DCRNN - INFO - Epoch 2, Batch 50/64, Loss: 73.8926, TF Ratio: 0.960
+2025-11-14 01:02:51,505 - DCRNN - INFO - Epoch 50: Train Loss: 62.4311, Val Loss: 60.1957, LR: 0.000485, Time: 69.3s
+2025-11-14 01:02:51,532 - DCRNN - INFO - Best model saved: checkpoints/best_model.pth
+2025-11-14 01:02:51,538 - DCRNN - INFO - Epoch 3: Train Loss: 72.2846, Val Loss: 71.2711, LR: 0.000996, Time: 69.4s
+2025-11-14 01:02:51,553 - DCRNN - INFO - Best model saved: checkpoints/best_model.pth
+2025-11-14 01:02:51,560 - DCRNN - INFO - Best model saved: checkpoints/best_model.pth
+2025-11-14 01:02:52,117 - DCRNN - INFO - Epoch 2: Train Loss: 73.4692, Val Loss: 72.0505, LR: 0.000998, Time: 68.8s
+2025-11-14 01:02:52,133 - DCRNN - INFO - Best model saved: checkpoints/best_model.pth
+2025-11-14 01:57:22,813 - DCRNN - INFO - Loading datasets...
+2025-11-14 01:57:23,258 - DCRNN - WARNING - Cannot load existing datasets: 'pred_hour'
+2025-11-14 01:57:23,258 - DCRNN - INFO - Creating new datasets from raw data...
+2025-11-14 01:57:24,687 - DCRNN - INFO - Train batches: 64
+2025-11-14 01:57:24,687 - DCRNN - INFO - Val batches: 14
+2025-11-14 01:57:24,687 - DCRNN - INFO - Building DCRNN model...
+2025-11-14 01:57:24,689 - DCRNN - INFO - Total parameters: 512,708
+2025-11-14 01:57:24,689 - DCRNN - INFO - Trainable parameters: 512,708
+2025-11-14 01:57:25,196 - DCRNN - INFO - Training setup completed
+2025-11-14 01:57:25,196 - DCRNN - INFO - Starting training...

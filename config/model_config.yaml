@@ -1,0 +1,186 @@
+# DCRNN 모델 설정 파일
+# 하이퍼파라미터 및 학습 설정
+
+# 모델 아키텍처
+model:
+  name: "DCRNN"
+  input_size: 46  # 🔥 2(시계열) + 16(노드) + 21(날짜) + 7(시간) = 46차원
+  hidden_size: 128  # 🔧 64 → 128 (복잡한 패턴 학습 능력 증가)
+  output_size: 2  # occupancy, total_flow
+  num_layers: 3   # 🔧 2 → 3 (더 깊은 네트워크)
+  diffusion_steps: 3  # K=3 (논문 기본값)
+  use_attention: true
+  dropout: 0.2    # 🔧 0.1 → 0.2 (과적합 방지)
+
+# 데이터 설정
+data:
+  input_length: 12  # 12시간 입력
+  output_length: 1  # 1시간 예측
+  input_size: 46  # 🔥 전체 특성 차원 (2+16+21+7)
+  batch_size: 16  # 🔧 CPU 부하 감소를 위해 32 → 16
+  num_workers: 2  # 🔧 CPU 부하 감소를 위해 4 → 2
+  pin_memory: true  # CPU에서는 pin_memory 사용 가능
+  
+  # 데이터 경로
+  train_path: "data/train_dataset.pkl"
+  val_path: "data/val_dataset.pkl"
+  test_path: "data/test_dataset.pkl"
+  adjacency_path: "data/adjacency_matrix.npy"
+
+# 손실 함수 설정
+loss:
+  type: "multitask"  # multitask, masked, quantile, focal
+  occupancy_weight: 1.0
+  flow_weight: 1.5  # 🆕 통행량 가중치 증가 (기존 0.5 → 1.5)
+  base_loss: "mae"  # mae, mse, huber
+  adaptive_weights: false  # 🆕 적응적 가중치 비활성화 (기존 true → false)
+  uncertainty_weighting: false
+  
+  # 정규화 손실
+  temporal_consistency:
+    enabled: true
+    weight: 0.01
+  
+  spatial_consistency:
+    enabled: true
+    weight: 0.005
+
+# 옵티마이저 설정
+optimizer:
+  type: "adam"  # adam, adamw, sgd
+  lr: 0.0005  # 🔧 학습률 감소 (0.002 → 0.0005, 더 세밀한 학습)
+  weight_decay: 0.0001
+  betas: [0.9, 0.999]
+  eps: 0.00000001
+
+# 스케줄러 설정
+scheduler:
+  type: "cosine"  # cosine, step, plateau, exponential
+  T_max: 100  # cosine annealing 주기
+  eta_min: 0.000001  # 최소 학습률
+  
+  # Step scheduler (if type == "step")
+  step_size: 30
+  gamma: 0.5
+  
+  # Plateau scheduler (if type == "plateau")
+  patience: 10
+  factor: 0.5
+  threshold: 0.0001
+
+# 학습 설정
+training:
+  epochs: 300  # 🔧 200 → 300 (더 오래 학습)
+  early_stopping:
+    enabled: true
+    patience: 20
+    min_delta: 0.0001
+    restore_best_weights: true
+  
+  # Teacher forcing (디코더 학습 안정화)
+  teacher_forcing:
+    initial_ratio: 1.0
+    final_ratio: 0.0  # 🔧 최종 비율 0으로 수정 (평가와 일치)
+    decay_epochs: 150  # 🔧 더 점진적 감소 (100 → 150)
+  
+  # 그래디언트 클리핑
+  gradient_clipping:
+    enabled: true
+    max_norm: 1.0
+  
+  # 체크포인트 저장
+  checkpoint:
+    save_best: true
+    save_every: 10  # 매 10 에포크마다 저장
+    save_dir: "checkpoints"
+  
+  # 검증 설정
+  validation:
+    frequency: 1  # 매 에포크마다 검증
+    metrics: ["mae", "rmse", "mape"]
+
+# 평가 설정
+evaluation:
+  metrics: ["mae", "rmse", "mape", "r2"]
+  
+  # 시각화 설정
+  visualization:
+    enabled: true
+    save_dir: "results/visualizations"
+    
+    # Attention 시각화
+    attention_plots: true
+    
+    # 예측 결과 시각화
+    prediction_plots:
+      enabled: true
+      num_samples: 5  # 시각화할 샘플 수
+      stations: ["갈마", "정부청사", "시청", "탄방", "용문"]  # 주요 역
+    
+    # 오차 분석
+    error_analysis:
+      enabled: true
+      by_time: true  # 시간대별 오차
+      by_station: true  # 역별 오차
+      by_day_type: true  # 요일별 오차
+
+# 실험 설정
+experiment:
+  name: "dcrnn_baseline"
+  description: "DCRNN with attention for subway congestion prediction"
+  tags: ["dcrnn", "attention", "subway", "congestion"]
+  
+  # 재현성
+  seed: 42
+  deterministic: true
+  
+  # 로깅
+  logging:
+    level: "INFO"
+    log_dir: "logs"
+    tensorboard: true
+    wandb:
+      enabled: false  # Weights & Biases 연동
+      project: "subway_congestion"
+      entity: "your_username"
+
+# 하드웨어 설정
+hardware:
+  device: "cpu"  # auto, cpu, cuda, mps - CPU로 강제 설정
+  mixed_precision: false  # AMP 사용 여부
+  compile_model: false  # torch.compile 사용 (PyTorch 2.0+)
+
+# 디버깅 설정
+debug:
+  enabled: false
+  check_gradients: true
+  profile_memory: false
+  detect_anomaly: false
+
+# 모델 변형 실험
+experiments:
+  # Attention 타입 비교
+  attention_variants:
+    - type: "additive"
+      attention_size: 64
+    - type: "self"
+      num_heads: 8
+    - type: "none"  # Attention 없음
+  
+  # 손실 함수 비교
+  loss_variants:
+    - type: "multitask"
+      adaptive_weights: true
+    - type: "multitask" 
+      adaptive_weights: false
+    - type: "focal"
+      gamma: 2.0
+  
+  # 모델 크기 비교
+  size_variants:
+    - hidden_size: 32
+      num_layers: 1
+    - hidden_size: 64
+      num_layers: 2
+    - hidden_size: 128
+      num_layers: 3
