@@ -1,0 +1,57 @@
+{
+  "station_name": "정부청사역",
+  "changes": {
+    "교육_밀도": 0.5,
+    "관공서_밀도": 0.6
+  },
+  "samples": [
+    {
+      "sample_idx": 0,
+      "original_pred": 0.0889686644077301,
+      "modified_pred": 0.09094598144292831,
+      "change": 0.0019773170351982117,
+      "change_pct": 2.222486972808838,
+      "actual": 0.0
+    },
+    {
+      "sample_idx": 1,
+      "original_pred": 0.08670548349618912,
+      "modified_pred": 0.07976287603378296,
+      "change": -0.0069426074624061584,
+      "change_pct": -8.00711441040039,
+      "actual": 0.0
+    },
+    {
+      "sample_idx": 2,
+      "original_pred": 0.10872973501682281,
+      "modified_pred": 0.4179641902446747,
+      "change": 0.3092344403266907,
+      "change_pct": 284.406494140625,
+      "actual": 0.0
+    },
+    {
+      "sample_idx": 3,
+      "original_pred": 1.2099546194076538,
+      "modified_pred": 15.03329086303711,
+      "change": 13.823336601257324,
+      "change_pct": 1142.4674072265625,
+      "actual": 0.0
+    },
+    {
+      "sample_idx": 4,
+      "original_pred": 21.17889976501465,
+      "modified_pred": 32.38665771484375,
+      "change": 11.207757949829102,
+      "change_pct": 52.91945266723633,
+      "actual": 43.0
+    }
+  ],
+  "statistics": {
+    "mean_change": 5.067072740197181,
+    "std_change": 6.1386972613093755,
+    "min_change": -0.0069426074624061584,
+    "max_change": 13.823336601257324,
+    "mean_change_pct": 294.80174531936643,
+    "std_change_pct": 436.9091454908555
+  }
+}
