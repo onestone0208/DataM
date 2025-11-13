@@ -2674,3 +2674,665 @@
 2025-11-14 04:53:27,332 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-1.01, 2.47]
 2025-11-14 04:53:27,332 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.1, 1362.4]명
 2025-11-14 04:53:27,415 - DCRNN-Occupancy - INFO - Best occupancy model saved: checkpoints/occupancy_model/best_occupancy_model.pth
+2025-11-14 04:53:30,817 - DCRNN-Occupancy - INFO - Epoch 8, Batch 0/125, Loss: 0.7301, TF Ratio: 0.095
+2025-11-14 04:53:49,348 - DCRNN-Occupancy - INFO - Epoch 8, Batch 50/125, Loss: 0.7399, TF Ratio: 0.095
+2025-11-14 04:54:05,560 - DCRNN-Occupancy - INFO - Epoch 8, Batch 100/125, Loss: 0.8205, TF Ratio: 0.095
+2025-11-14 04:54:18,835 - DCRNN-Occupancy - INFO - Epoch 8: Train Loss: 0.6706, Val Loss: 0.7169, LR: 0.000490, Time: 51.4s
+2025-11-14 04:54:18,835 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-1.03, 2.45]
+2025-11-14 04:54:18,835 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.1, 1308.8]명
+2025-11-14 04:54:22,037 - DCRNN-Occupancy - INFO - Epoch 9, Batch 0/125, Loss: 0.6374, TF Ratio: 0.024
+2025-11-14 04:54:37,913 - DCRNN-Occupancy - INFO - Epoch 9, Batch 50/125, Loss: 0.6262, TF Ratio: 0.024
+2025-11-14 04:54:53,604 - DCRNN-Occupancy - INFO - Epoch 9, Batch 100/125, Loss: 0.6617, TF Ratio: 0.024
+2025-11-14 04:55:07,782 - DCRNN-Occupancy - INFO - Epoch 9: Train Loss: 0.6877, Val Loss: 0.6833, LR: 0.000488, Time: 48.9s
+2025-11-14 04:55:07,782 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-1.00, 2.10]
+2025-11-14 04:55:07,782 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.1, 627.8]명
+2025-11-14 04:55:10,697 - DCRNN-Occupancy - INFO - Epoch 10, Batch 0/125, Loss: 0.6405, TF Ratio: 0.000
+2025-11-14 04:55:26,333 - DCRNN-Occupancy - INFO - Epoch 10, Batch 50/125, Loss: 0.6384, TF Ratio: 0.000
+2025-11-14 04:55:41,716 - DCRNN-Occupancy - INFO - Epoch 10, Batch 100/125, Loss: 0.6757, TF Ratio: 0.000
+2025-11-14 04:55:53,662 - DCRNN-Occupancy - INFO - Epoch 10: Train Loss: 0.6844, Val Loss: 0.6902, LR: 0.000485, Time: 45.9s
+2025-11-14 04:55:53,663 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-0.99, 1.50]
+2025-11-14 04:55:53,663 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.0, 179.1]명
+2025-11-14 04:55:56,545 - DCRNN-Occupancy - INFO - Epoch 11, Batch 0/125, Loss: 0.7128, TF Ratio: 0.000
+2025-11-14 04:56:10,990 - DCRNN-Occupancy - INFO - Epoch 11, Batch 50/125, Loss: 0.6240, TF Ratio: 0.000
+2025-11-14 04:56:25,572 - DCRNN-Occupancy - INFO - Epoch 11, Batch 100/125, Loss: 0.7260, TF Ratio: 0.000
+2025-11-14 04:56:39,198 - DCRNN-Occupancy - INFO - Epoch 11: Train Loss: 0.6780, Val Loss: 0.6848, LR: 0.000482, Time: 45.5s
+2025-11-14 04:56:39,199 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-0.99, 1.54]
+2025-11-14 04:56:39,199 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.0, 194.3]명
+2025-11-14 04:56:42,420 - DCRNN-Occupancy - INFO - Epoch 12, Batch 0/125, Loss: 0.6182, TF Ratio: 0.000
+2025-11-14 04:56:57,200 - DCRNN-Occupancy - INFO - Epoch 12, Batch 50/125, Loss: 0.7819, TF Ratio: 0.000
+2025-11-14 04:57:10,510 - DCRNN-Occupancy - INFO - Epoch 12, Batch 100/125, Loss: 0.7112, TF Ratio: 0.000
+2025-11-14 04:57:22,192 - DCRNN-Occupancy - INFO - Epoch 12: Train Loss: 0.6825, Val Loss: 0.6827, LR: 0.000479, Time: 43.0s
+2025-11-14 04:57:22,193 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-0.99, 1.57]
+2025-11-14 04:57:22,193 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.1, 204.0]명
+2025-11-14 04:57:24,989 - DCRNN-Occupancy - INFO - Epoch 13, Batch 0/125, Loss: 0.6798, TF Ratio: 0.000
+2025-11-14 04:57:38,345 - DCRNN-Occupancy - INFO - Epoch 13, Batch 50/125, Loss: 0.5436, TF Ratio: 0.000
+2025-11-14 04:57:51,998 - DCRNN-Occupancy - INFO - Epoch 13, Batch 100/125, Loss: 0.6846, TF Ratio: 0.000
+2025-11-14 04:58:04,933 - DCRNN-Occupancy - INFO - Epoch 13: Train Loss: 0.6832, Val Loss: 0.7768, LR: 0.000476, Time: 42.7s
+2025-11-14 04:58:04,933 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-0.99, 1.53]
+2025-11-14 04:58:04,933 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.0, 187.8]명
+2025-11-14 04:58:07,645 - DCRNN-Occupancy - INFO - Epoch 14, Batch 0/125, Loss: 0.7836, TF Ratio: 0.000
+2025-11-14 04:58:21,876 - DCRNN-Occupancy - INFO - Epoch 14, Batch 50/125, Loss: 1.0142, TF Ratio: 0.000
+2025-11-14 04:58:35,237 - DCRNN-Occupancy - INFO - Epoch 14, Batch 100/125, Loss: 0.6706, TF Ratio: 0.000
+2025-11-14 04:58:48,425 - DCRNN-Occupancy - INFO - Epoch 14: Train Loss: 0.6853, Val Loss: 0.6793, LR: 0.000473, Time: 43.5s
+2025-11-14 04:58:48,426 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-1.00, 1.51]
+2025-11-14 04:58:48,426 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.1, 182.5]명
+2025-11-14 04:58:48,508 - DCRNN-Occupancy - INFO - Best occupancy model saved: checkpoints/occupancy_model/best_occupancy_model.pth
+2025-11-14 04:58:51,483 - DCRNN-Occupancy - INFO - Epoch 15, Batch 0/125, Loss: 0.5097, TF Ratio: 0.000
+2025-11-14 04:59:06,567 - DCRNN-Occupancy - INFO - Epoch 15, Batch 50/125, Loss: 0.6264, TF Ratio: 0.000
+2025-11-14 04:59:22,599 - DCRNN-Occupancy - INFO - Epoch 15, Batch 100/125, Loss: 0.5532, TF Ratio: 0.000
+2025-11-14 04:59:36,182 - DCRNN-Occupancy - INFO - Epoch 15: Train Loss: 0.6715, Val Loss: 0.6755, LR: 0.000469, Time: 47.7s
+2025-11-14 04:59:36,183 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-0.99, 1.54]
+2025-11-14 04:59:36,183 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.1, 192.5]명
+2025-11-14 04:59:36,259 - DCRNN-Occupancy - INFO - Best occupancy model saved: checkpoints/occupancy_model/best_occupancy_model.pth
+2025-11-14 04:59:39,615 - DCRNN-Occupancy - INFO - Epoch 16, Batch 0/125, Loss: 0.7256, TF Ratio: 0.000
+2025-11-14 04:59:56,026 - DCRNN-Occupancy - INFO - Epoch 16, Batch 50/125, Loss: 0.7454, TF Ratio: 0.000
+2025-11-14 05:00:11,397 - DCRNN-Occupancy - INFO - Epoch 16, Batch 100/125, Loss: 0.6038, TF Ratio: 0.000
+2025-11-14 05:00:25,356 - DCRNN-Occupancy - INFO - Epoch 16: Train Loss: 0.6706, Val Loss: 0.6809, LR: 0.000465, Time: 49.1s
+2025-11-14 05:00:25,356 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-0.99, 1.56]
+2025-11-14 05:00:25,356 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.1, 200.3]명
+2025-11-14 05:00:28,416 - DCRNN-Occupancy - INFO - Epoch 17, Batch 0/125, Loss: 0.4897, TF Ratio: 0.000
+2025-11-14 05:00:43,146 - DCRNN-Occupancy - INFO - Epoch 17, Batch 50/125, Loss: 0.4902, TF Ratio: 0.000
+2025-11-14 05:00:53,660 - DCRNN-Occupancy - INFO - 혼잡도 전용 데이터셋 로드 중...
+2025-11-14 05:00:53,745 - DCRNN-Occupancy - INFO - 계절별 균등 분할 완료:
+2025-11-14 05:00:53,745 - DCRNN-Occupancy - INFO -   Train: 166일
+2025-11-14 05:00:53,745 - DCRNN-Occupancy - INFO -   Val: 37일
+2025-11-14 05:00:53,745 - DCRNN-Occupancy - INFO -   Test: 40일
+2025-11-14 05:00:53,745 - DCRNN-Occupancy - INFO - 분할 정보 저장: data/seasonal_split.pkl
+2025-11-14 05:01:05,105 - DCRNN-Occupancy - INFO - Train batches: 125
+2025-11-14 05:01:05,105 - DCRNN-Occupancy - INFO - Val batches: 28
+2025-11-14 05:01:05,108 - DCRNN-Occupancy - INFO - 혼잡도 전용 DCRNN 모델 구성 중...
+2025-11-14 05:01:05,114 - DCRNN-Occupancy - INFO - Total parameters: 3,207,182
+2025-11-14 05:01:05,114 - DCRNN-Occupancy - INFO - Trainable parameters: 3,207,182
+2025-11-14 05:01:05,615 - DCRNN-Occupancy - INFO - 혼잡도 모델 훈련 설정 완료
+2025-11-14 05:01:05,616 - DCRNN-Occupancy - INFO - 혼잡도 모델 훈련 시작...
+2025-11-14 05:01:05,616 - DCRNN-Occupancy - INFO - 총 300 에포크 훈련 예정
+2025-11-14 05:01:05,616 - DCRNN-Occupancy - INFO - 시작 에포크: 0
+2025-11-14 05:01:05,616 - DCRNN-Occupancy - INFO - 디바이스: cpu
+2025-11-14 05:01:08,554 - DCRNN-Occupancy - INFO - 첫 배치 처리 시작 - X shape: torch.Size([16, 12, 22, 31]), Y shape: torch.Size([16, 22, 1])
+2025-11-14 05:01:08,798 - DCRNN-Occupancy - INFO - 🔍 Teacher Forcing 없이 예측 범위: [-0.476, 0.238]
+2025-11-14 05:01:08,798 - DCRNN-Occupancy - INFO - 🔍 Teacher Forcing 99%로 예측 범위: [-0.245, 0.234]
+2025-11-14 05:01:08,964 - DCRNN-Occupancy - INFO - Epoch 0, Batch 0/125, Loss: 0.9803, TF Ratio: 0.700
+2025-11-14 05:01:22,287 - DCRNN-Occupancy - INFO - Epoch 0, Batch 50/125, Loss: 0.7511, TF Ratio: 0.700
+2025-11-14 05:01:35,046 - DCRNN-Occupancy - INFO - Epoch 0, Batch 100/125, Loss: 0.1366, TF Ratio: 0.700
+2025-11-14 05:01:46,727 - DCRNN-Occupancy - INFO - Epoch 0: Train Loss: 0.4649, Val Loss: 0.7157, LR: 0.000500, Time: 41.1s
+2025-11-14 05:01:46,727 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-2.27, 2.22]
+2025-11-14 05:01:46,727 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.9, 812.3]명
+2025-11-14 05:01:46,819 - DCRNN-Occupancy - INFO - Best occupancy model saved: checkpoints/occupancy_model/best_occupancy_model.pth
+2025-11-14 05:01:46,907 - DCRNN-Occupancy - INFO - Best occupancy model saved: checkpoints/occupancy_model/best_occupancy_model.pth
+2025-11-14 05:01:49,437 - DCRNN-Occupancy - INFO - Epoch 1, Batch 0/125, Loss: 0.3087, TF Ratio: 0.685
+2025-11-14 05:02:03,881 - DCRNN-Occupancy - INFO - Epoch 1, Batch 50/125, Loss: 0.7828, TF Ratio: 0.685
+2025-11-14 05:02:18,184 - DCRNN-Occupancy - INFO - Epoch 1, Batch 100/125, Loss: 0.6148, TF Ratio: 0.685
+2025-11-14 05:02:29,859 - DCRNN-Occupancy - INFO - Epoch 1: Train Loss: 0.3026, Val Loss: 0.6648, LR: 0.000500, Time: 43.0s
+2025-11-14 05:02:29,859 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-1.26, 2.24]
+2025-11-14 05:02:29,859 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.5, 845.1]명
+2025-11-14 05:02:29,935 - DCRNN-Occupancy - INFO - Best occupancy model saved: checkpoints/occupancy_model/best_occupancy_model.pth
+2025-11-14 05:02:32,757 - DCRNN-Occupancy - INFO - Epoch 2, Batch 0/125, Loss: 0.0859, TF Ratio: 0.643
+2025-11-14 05:02:46,087 - DCRNN-Occupancy - INFO - Epoch 2, Batch 50/125, Loss: 0.5605, TF Ratio: 0.643
+2025-11-14 05:02:59,731 - DCRNN-Occupancy - INFO - Epoch 2, Batch 100/125, Loss: 0.0651, TF Ratio: 0.643
+2025-11-14 05:03:11,400 - DCRNN-Occupancy - INFO - Epoch 2: Train Loss: 0.2544, Val Loss: 0.6440, LR: 0.000499, Time: 41.5s
+2025-11-14 05:03:11,401 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-1.10, 2.28]
+2025-11-14 05:03:11,401 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.2, 921.2]명
+2025-11-14 05:03:11,473 - DCRNN-Occupancy - INFO - Best occupancy model saved: checkpoints/occupancy_model/best_occupancy_model.pth
+2025-11-14 05:03:14,127 - DCRNN-Occupancy - INFO - Epoch 3, Batch 0/125, Loss: 0.6513, TF Ratio: 0.576
+2025-11-14 05:03:27,481 - DCRNN-Occupancy - INFO - Epoch 3, Batch 50/125, Loss: 0.5905, TF Ratio: 0.576
+2025-11-14 05:03:40,908 - DCRNN-Occupancy - INFO - Epoch 3, Batch 100/125, Loss: 0.5943, TF Ratio: 0.576
+2025-11-14 05:03:52,352 - DCRNN-Occupancy - INFO - Epoch 3: Train Loss: 0.3465, Val Loss: 0.6196, LR: 0.000498, Time: 40.9s
+2025-11-14 05:03:52,353 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-1.04, 2.28]
+2025-11-14 05:03:52,353 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.2, 917.7]명
+2025-11-14 05:03:52,425 - DCRNN-Occupancy - INFO - Best occupancy model saved: checkpoints/occupancy_model/best_occupancy_model.pth
+2025-11-14 05:03:55,417 - DCRNN-Occupancy - INFO - Epoch 4, Batch 0/125, Loss: 0.0555, TF Ratio: 0.493
+2025-11-14 05:04:08,728 - DCRNN-Occupancy - INFO - Epoch 4, Batch 50/125, Loss: 0.0270, TF Ratio: 0.493
+2025-11-14 05:04:22,039 - DCRNN-Occupancy - INFO - Epoch 4, Batch 100/125, Loss: 0.4797, TF Ratio: 0.493
+2025-11-14 05:04:33,658 - DCRNN-Occupancy - INFO - Epoch 4: Train Loss: 0.2893, Val Loss: 0.6413, LR: 0.000497, Time: 41.2s
+2025-11-14 05:04:33,659 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-1.01, 2.34]
+2025-11-14 05:04:33,659 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.1, 1052.3]명
+2025-11-14 05:04:36,486 - DCRNN-Occupancy - INFO - Epoch 5, Batch 0/125, Loss: 0.5773, TF Ratio: 0.400
+2025-11-14 05:04:50,710 - DCRNN-Occupancy - INFO - Epoch 5, Batch 50/125, Loss: 0.4357, TF Ratio: 0.400
+2025-11-14 05:05:06,026 - DCRNN-Occupancy - INFO - Epoch 5, Batch 100/125, Loss: 0.0959, TF Ratio: 0.400
+2025-11-14 05:05:18,364 - DCRNN-Occupancy - INFO - Epoch 5: Train Loss: 0.4118, Val Loss: 0.6415, LR: 0.000496, Time: 44.7s
+2025-11-14 05:05:18,364 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-1.04, 2.42]
+2025-11-14 05:05:18,364 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.1, 1225.8]명
+2025-11-14 05:05:21,050 - DCRNN-Occupancy - INFO - Epoch 6, Batch 0/125, Loss: 0.5239, TF Ratio: 0.307
+2025-11-14 05:05:34,038 - DCRNN-Occupancy - INFO - Epoch 6, Batch 50/125, Loss: 0.6210, TF Ratio: 0.307
+2025-11-14 05:05:46,752 - DCRNN-Occupancy - INFO - Epoch 6, Batch 100/125, Loss: 0.5376, TF Ratio: 0.307
+2025-11-14 05:05:57,932 - DCRNN-Occupancy - INFO - Epoch 6: Train Loss: 0.4211, Val Loss: 0.6340, LR: 0.000494, Time: 39.6s
+2025-11-14 05:05:57,932 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-1.00, 2.26]
+2025-11-14 05:05:57,932 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.1, 877.7]명
+2025-11-14 05:06:00,439 - DCRNN-Occupancy - INFO - Epoch 7, Batch 0/125, Loss: 0.5475, TF Ratio: 0.224
+2025-11-14 05:06:13,296 - DCRNN-Occupancy - INFO - Epoch 7, Batch 50/125, Loss: 0.5800, TF Ratio: 0.224
+2025-11-14 05:06:26,057 - DCRNN-Occupancy - INFO - Epoch 7, Batch 100/125, Loss: 0.5367, TF Ratio: 0.224
+2025-11-14 05:06:37,164 - DCRNN-Occupancy - INFO - Epoch 7: Train Loss: 0.5303, Val Loss: 0.6284, LR: 0.000492, Time: 39.2s
+2025-11-14 05:06:37,164 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-1.00, 2.29]
+2025-11-14 05:06:37,164 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.1, 942.6]명
+2025-11-14 05:06:39,782 - DCRNN-Occupancy - INFO - Epoch 8, Batch 0/125, Loss: 0.5180, TF Ratio: 0.157
+2025-11-14 05:06:52,552 - DCRNN-Occupancy - INFO - Epoch 8, Batch 50/125, Loss: 0.4968, TF Ratio: 0.157
+2025-11-14 05:07:06,390 - DCRNN-Occupancy - INFO - Epoch 8, Batch 100/125, Loss: 0.6362, TF Ratio: 0.157
+2025-11-14 05:07:17,729 - DCRNN-Occupancy - INFO - Epoch 8: Train Loss: 0.5178, Val Loss: 0.6476, LR: 0.000490, Time: 40.6s
+2025-11-14 05:07:17,729 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-0.99, 2.06]
+2025-11-14 05:07:17,729 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.1, 576.6]명
+2025-11-14 05:07:20,479 - DCRNN-Occupancy - INFO - Epoch 9, Batch 0/125, Loss: 0.7825, TF Ratio: 0.115
+2025-11-14 05:07:33,329 - DCRNN-Occupancy - INFO - Epoch 9, Batch 50/125, Loss: 0.4716, TF Ratio: 0.115
+2025-11-14 05:07:46,174 - DCRNN-Occupancy - INFO - Epoch 9, Batch 100/125, Loss: 0.7433, TF Ratio: 0.115
+2025-11-14 05:07:57,846 - DCRNN-Occupancy - INFO - Epoch 9: Train Loss: 0.6179, Val Loss: 0.6354, LR: 0.000488, Time: 40.1s
+2025-11-14 05:07:57,846 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-1.00, 2.04]
+2025-11-14 05:07:57,846 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.1, 558.8]명
+2025-11-14 05:08:00,502 - DCRNN-Occupancy - INFO - Epoch 10, Batch 0/125, Loss: 0.5530, TF Ratio: 0.100
+2025-11-14 05:08:12,954 - DCRNN-Occupancy - INFO - Epoch 10, Batch 50/125, Loss: 0.6778, TF Ratio: 0.100
+2025-11-14 05:08:25,261 - DCRNN-Occupancy - INFO - Epoch 10, Batch 100/125, Loss: 0.6150, TF Ratio: 0.100
+2025-11-14 05:08:36,003 - DCRNN-Occupancy - INFO - Epoch 10: Train Loss: 0.5709, Val Loss: 0.6165, LR: 0.000485, Time: 38.2s
+2025-11-14 05:08:36,004 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-0.99, 2.15]
+2025-11-14 05:08:36,004 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.0, 692.4]명
+2025-11-14 05:08:36,076 - DCRNN-Occupancy - INFO - Best occupancy model saved: checkpoints/occupancy_model/best_occupancy_model.pth
+2025-11-14 05:08:36,147 - DCRNN-Occupancy - INFO - Best occupancy model saved: checkpoints/occupancy_model/best_occupancy_model.pth
+2025-11-14 05:08:38,834 - DCRNN-Occupancy - INFO - Epoch 11, Batch 0/125, Loss: 0.5050, TF Ratio: 0.100
+2025-11-14 05:08:51,018 - DCRNN-Occupancy - INFO - Epoch 11, Batch 50/125, Loss: 0.6277, TF Ratio: 0.100
+2025-11-14 05:09:03,431 - DCRNN-Occupancy - INFO - Epoch 11, Batch 100/125, Loss: 0.5723, TF Ratio: 0.100
+2025-11-14 05:09:14,069 - DCRNN-Occupancy - INFO - Epoch 11: Train Loss: 0.5720, Val Loss: 0.6181, LR: 0.000482, Time: 37.9s
+2025-11-14 05:09:14,069 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-0.99, 1.95]
+2025-11-14 05:09:14,069 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.1, 461.3]명
+2025-11-14 05:09:16,675 - DCRNN-Occupancy - INFO - Epoch 12, Batch 0/125, Loss: 0.3776, TF Ratio: 0.100
+2025-11-14 05:09:29,256 - DCRNN-Occupancy - INFO - Epoch 12, Batch 50/125, Loss: 0.7609, TF Ratio: 0.100
+2025-11-14 05:09:42,091 - DCRNN-Occupancy - INFO - Epoch 12, Batch 100/125, Loss: 0.5541, TF Ratio: 0.100
+2025-11-14 05:09:53,271 - DCRNN-Occupancy - INFO - Epoch 12: Train Loss: 0.5716, Val Loss: 0.6458, LR: 0.000479, Time: 39.2s
+2025-11-14 05:09:53,271 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-0.98, 2.06]
+2025-11-14 05:09:53,271 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.0, 583.9]명
+2025-11-14 05:09:56,169 - DCRNN-Occupancy - INFO - Epoch 13, Batch 0/125, Loss: 0.5203, TF Ratio: 0.100
+2025-11-14 05:10:09,037 - DCRNN-Occupancy - INFO - Epoch 13, Batch 50/125, Loss: 0.5970, TF Ratio: 0.100
+2025-11-14 05:10:21,886 - DCRNN-Occupancy - INFO - Epoch 13, Batch 100/125, Loss: 0.7020, TF Ratio: 0.100
+2025-11-14 05:10:33,043 - DCRNN-Occupancy - INFO - Epoch 13: Train Loss: 0.5804, Val Loss: 0.6169, LR: 0.000476, Time: 39.8s
+2025-11-14 05:10:33,043 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-1.01, 1.92]
+2025-11-14 05:10:33,043 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.1, 428.1]명
+2025-11-14 05:10:35,663 - DCRNN-Occupancy - INFO - Epoch 14, Batch 0/125, Loss: 0.7358, TF Ratio: 0.100
+2025-11-14 05:10:48,586 - DCRNN-Occupancy - INFO - Epoch 14, Batch 50/125, Loss: 0.6495, TF Ratio: 0.100
+2025-11-14 05:11:01,716 - DCRNN-Occupancy - INFO - Epoch 14, Batch 100/125, Loss: 0.6043, TF Ratio: 0.100
+2025-11-14 05:11:12,905 - DCRNN-Occupancy - INFO - Epoch 14: Train Loss: 0.5539, Val Loss: 0.6178, LR: 0.000473, Time: 39.9s
+2025-11-14 05:11:12,906 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-0.99, 1.89]
+2025-11-14 05:11:12,906 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.0, 400.5]명
+2025-11-14 05:11:15,580 - DCRNN-Occupancy - INFO - Epoch 15, Batch 0/125, Loss: 0.0971, TF Ratio: 0.100
+2025-11-14 05:11:28,332 - DCRNN-Occupancy - INFO - Epoch 15, Batch 50/125, Loss: 0.4997, TF Ratio: 0.100
+2025-11-14 05:11:41,056 - DCRNN-Occupancy - INFO - Epoch 15, Batch 100/125, Loss: 0.6026, TF Ratio: 0.100
+2025-11-14 05:11:52,089 - DCRNN-Occupancy - INFO - Epoch 15: Train Loss: 0.5344, Val Loss: 0.6191, LR: 0.000469, Time: 39.2s
+2025-11-14 05:11:52,089 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-0.99, 2.07]
+2025-11-14 05:11:52,089 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.1, 584.2]명
+2025-11-14 05:11:55,262 - DCRNN-Occupancy - INFO - Epoch 16, Batch 0/125, Loss: 0.7220, TF Ratio: 0.100
+2025-11-14 05:12:08,146 - DCRNN-Occupancy - INFO - Epoch 16, Batch 50/125, Loss: 0.5097, TF Ratio: 0.100
+2025-11-14 05:12:21,028 - DCRNN-Occupancy - INFO - Epoch 16, Batch 100/125, Loss: 0.3543, TF Ratio: 0.100
+2025-11-14 05:12:32,245 - DCRNN-Occupancy - INFO - Epoch 16: Train Loss: 0.5560, Val Loss: 0.6161, LR: 0.000465, Time: 40.2s
+2025-11-14 05:12:32,245 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-0.99, 1.90]
+2025-11-14 05:12:32,245 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.0, 412.6]명
+2025-11-14 05:12:32,318 - DCRNN-Occupancy - INFO - Best occupancy model saved: checkpoints/occupancy_model/best_occupancy_model.pth
+2025-11-14 05:12:35,083 - DCRNN-Occupancy - INFO - Epoch 17, Batch 0/125, Loss: 0.4528, TF Ratio: 0.100
+2025-11-14 05:12:47,902 - DCRNN-Occupancy - INFO - Epoch 17, Batch 50/125, Loss: 0.5314, TF Ratio: 0.100
+2025-11-14 05:13:01,098 - DCRNN-Occupancy - INFO - Epoch 17, Batch 100/125, Loss: 0.6612, TF Ratio: 0.100
+2025-11-14 05:13:12,858 - DCRNN-Occupancy - INFO - Epoch 17: Train Loss: 0.5564, Val Loss: 0.6171, LR: 0.000461, Time: 40.5s
+2025-11-14 05:13:12,858 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-0.99, 1.93]
+2025-11-14 05:13:12,858 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.1, 444.1]명
+2025-11-14 05:13:15,966 - DCRNN-Occupancy - INFO - Epoch 18, Batch 0/125, Loss: 0.5830, TF Ratio: 0.100
+2025-11-14 05:13:29,917 - DCRNN-Occupancy - INFO - Epoch 18, Batch 50/125, Loss: 0.5256, TF Ratio: 0.100
+2025-11-14 05:13:44,360 - DCRNN-Occupancy - INFO - Epoch 18, Batch 100/125, Loss: 0.6519, TF Ratio: 0.100
+2025-11-14 05:13:58,473 - DCRNN-Occupancy - INFO - Epoch 18: Train Loss: 0.5657, Val Loss: 0.6467, LR: 0.000457, Time: 45.6s
+2025-11-14 05:13:58,473 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-0.99, 1.79]
+2025-11-14 05:13:58,473 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.1, 328.9]명
+2025-11-14 05:14:01,387 - DCRNN-Occupancy - INFO - Epoch 19, Batch 0/125, Loss: 0.7627, TF Ratio: 0.100
+2025-11-14 05:14:14,126 - DCRNN-Occupancy - INFO - Epoch 19, Batch 50/125, Loss: 0.8222, TF Ratio: 0.100
+2025-11-14 05:14:27,171 - DCRNN-Occupancy - INFO - Epoch 19, Batch 100/125, Loss: 0.6533, TF Ratio: 0.100
+2025-11-14 05:14:39,355 - DCRNN-Occupancy - INFO - Epoch 19: Train Loss: 0.5650, Val Loss: 0.6130, LR: 0.000452, Time: 40.9s
+2025-11-14 05:14:39,355 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-0.99, 1.94]
+2025-11-14 05:14:39,355 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.1, 447.9]명
+2025-11-14 05:14:39,429 - DCRNN-Occupancy - INFO - Best occupancy model saved: checkpoints/occupancy_model/best_occupancy_model.pth
+2025-11-14 05:14:42,589 - DCRNN-Occupancy - INFO - Epoch 20, Batch 0/125, Loss: 0.6392, TF Ratio: 0.100
+2025-11-14 05:14:56,530 - DCRNN-Occupancy - INFO - Epoch 20, Batch 50/125, Loss: 0.6296, TF Ratio: 0.100
+2025-11-14 05:15:09,245 - DCRNN-Occupancy - INFO - Epoch 20, Batch 100/125, Loss: 0.5848, TF Ratio: 0.100
+2025-11-14 05:15:20,633 - DCRNN-Occupancy - INFO - Epoch 20: Train Loss: 0.5738, Val Loss: 0.6150, LR: 0.000448, Time: 41.2s
+2025-11-14 05:15:20,633 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-0.98, 1.91]
+2025-11-14 05:15:20,633 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.0, 425.3]명
+2025-11-14 05:15:23,209 - DCRNN-Occupancy - INFO - Epoch 21, Batch 0/125, Loss: 0.5106, TF Ratio: 0.100
+2025-11-14 05:15:35,889 - DCRNN-Occupancy - INFO - Epoch 21, Batch 50/125, Loss: 0.6885, TF Ratio: 0.100
+2025-11-14 05:15:48,454 - DCRNN-Occupancy - INFO - Epoch 21, Batch 100/125, Loss: 0.6015, TF Ratio: 0.100
+2025-11-14 05:15:59,253 - DCRNN-Occupancy - INFO - Epoch 21: Train Loss: 0.5778, Val Loss: 0.6188, LR: 0.000443, Time: 38.6s
+2025-11-14 05:15:59,253 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-0.98, 2.09]
+2025-11-14 05:15:59,253 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.0, 619.9]명
+2025-11-14 05:16:01,781 - DCRNN-Occupancy - INFO - Epoch 22, Batch 0/125, Loss: 0.5868, TF Ratio: 0.100
+2025-11-14 05:16:14,133 - DCRNN-Occupancy - INFO - Epoch 22, Batch 50/125, Loss: 0.0524, TF Ratio: 0.100
+2025-11-14 05:16:26,346 - DCRNN-Occupancy - INFO - Epoch 22, Batch 100/125, Loss: 0.5857, TF Ratio: 0.100
+2025-11-14 05:16:36,992 - DCRNN-Occupancy - INFO - Epoch 22: Train Loss: 0.5642, Val Loss: 0.6147, LR: 0.000438, Time: 37.7s
+2025-11-14 05:16:36,992 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-1.01, 1.93]
+2025-11-14 05:16:36,992 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.1, 440.3]명
+2025-11-14 05:16:39,343 - DCRNN-Occupancy - INFO - Epoch 23, Batch 0/125, Loss: 0.7392, TF Ratio: 0.100
+2025-11-14 05:16:51,974 - DCRNN-Occupancy - INFO - Epoch 23, Batch 50/125, Loss: 0.5297, TF Ratio: 0.100
+2025-11-14 05:17:04,728 - DCRNN-Occupancy - INFO - Epoch 23, Batch 100/125, Loss: 0.7081, TF Ratio: 0.100
+2025-11-14 05:17:15,242 - DCRNN-Occupancy - INFO - Epoch 23: Train Loss: 0.5430, Val Loss: 0.6132, LR: 0.000432, Time: 38.2s
+2025-11-14 05:17:15,242 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-0.99, 1.83]
+2025-11-14 05:17:15,242 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.0, 358.6]명
+2025-11-14 05:17:17,659 - DCRNN-Occupancy - INFO - Epoch 24, Batch 0/125, Loss: 0.6820, TF Ratio: 0.100
+2025-11-14 05:17:30,077 - DCRNN-Occupancy - INFO - Epoch 24, Batch 50/125, Loss: 0.7254, TF Ratio: 0.100
+2025-11-14 05:17:42,451 - DCRNN-Occupancy - INFO - Epoch 24, Batch 100/125, Loss: 0.5940, TF Ratio: 0.100
+2025-11-14 05:17:53,011 - DCRNN-Occupancy - INFO - Epoch 24: Train Loss: 0.5662, Val Loss: 0.6177, LR: 0.000427, Time: 37.8s
+2025-11-14 05:17:53,011 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-0.98, 1.89]
+2025-11-14 05:17:53,011 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.0, 403.4]명
+2025-11-14 05:17:55,615 - DCRNN-Occupancy - INFO - Epoch 25, Batch 0/125, Loss: 0.4147, TF Ratio: 0.100
+2025-11-14 05:18:08,209 - DCRNN-Occupancy - INFO - Epoch 25, Batch 50/125, Loss: 0.8092, TF Ratio: 0.100
+2025-11-14 05:18:20,780 - DCRNN-Occupancy - INFO - Epoch 25, Batch 100/125, Loss: 0.6191, TF Ratio: 0.100
+2025-11-14 05:18:31,396 - DCRNN-Occupancy - INFO - Epoch 25: Train Loss: 0.5381, Val Loss: 0.6150, LR: 0.000421, Time: 38.4s
+2025-11-14 05:18:31,396 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-0.99, 1.79]
+2025-11-14 05:18:31,396 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.0, 325.9]명
+2025-11-14 05:18:33,842 - DCRNN-Occupancy - INFO - Epoch 26, Batch 0/125, Loss: 0.6989, TF Ratio: 0.100
+2025-11-14 05:18:46,418 - DCRNN-Occupancy - INFO - Epoch 26, Batch 50/125, Loss: 0.6131, TF Ratio: 0.100
+2025-11-14 05:19:00,338 - DCRNN-Occupancy - INFO - Epoch 26, Batch 100/125, Loss: 0.7434, TF Ratio: 0.100
+2025-11-14 05:19:13,954 - DCRNN-Occupancy - INFO - Epoch 26: Train Loss: 0.5692, Val Loss: 0.6151, LR: 0.000415, Time: 42.6s
+2025-11-14 05:19:13,954 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-0.98, 1.79]
+2025-11-14 05:19:13,955 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.0, 328.9]명
+2025-11-14 05:19:17,199 - DCRNN-Occupancy - INFO - Epoch 27, Batch 0/125, Loss: 0.5567, TF Ratio: 0.100
+2025-11-14 05:19:33,146 - DCRNN-Occupancy - INFO - Epoch 27, Batch 50/125, Loss: 0.5101, TF Ratio: 0.100
+2025-11-14 05:19:47,756 - DCRNN-Occupancy - INFO - Epoch 27, Batch 100/125, Loss: 0.5121, TF Ratio: 0.100
+2025-11-14 05:20:00,563 - DCRNN-Occupancy - INFO - Epoch 27: Train Loss: 0.5620, Val Loss: 0.6131, LR: 0.000410, Time: 46.6s
+2025-11-14 05:20:00,563 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-0.98, 1.79]
+2025-11-14 05:20:00,563 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.0, 325.1]명
+2025-11-14 05:20:03,671 - DCRNN-Occupancy - INFO - Epoch 28, Batch 0/125, Loss: 0.0578, TF Ratio: 0.100
+2025-11-14 05:20:19,258 - DCRNN-Occupancy - INFO - Epoch 28, Batch 50/125, Loss: 0.6937, TF Ratio: 0.100
+2025-11-14 05:20:34,591 - DCRNN-Occupancy - INFO - Epoch 28, Batch 100/125, Loss: 0.6554, TF Ratio: 0.100
+2025-11-14 05:20:48,744 - DCRNN-Occupancy - INFO - Epoch 28: Train Loss: 0.5698, Val Loss: 0.6122, LR: 0.000403, Time: 48.2s
+2025-11-14 05:20:48,744 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-0.99, 1.77]
+2025-11-14 05:20:48,744 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.0, 315.2]명
+2025-11-14 05:20:48,834 - DCRNN-Occupancy - INFO - Best occupancy model saved: checkpoints/occupancy_model/best_occupancy_model.pth
+2025-11-14 05:20:51,771 - DCRNN-Occupancy - INFO - Epoch 29, Batch 0/125, Loss: 0.4948, TF Ratio: 0.100
+2025-11-14 05:21:08,255 - DCRNN-Occupancy - INFO - Epoch 29, Batch 50/125, Loss: 0.5592, TF Ratio: 0.100
+2025-11-14 05:21:24,403 - DCRNN-Occupancy - INFO - Epoch 29, Batch 100/125, Loss: 0.6029, TF Ratio: 0.100
+2025-11-14 05:21:36,797 - DCRNN-Occupancy - INFO - Epoch 29: Train Loss: 0.5497, Val Loss: 0.6174, LR: 0.000397, Time: 48.0s
+2025-11-14 05:21:36,797 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-0.98, 1.90]
+2025-11-14 05:21:36,797 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.0, 416.8]명
+2025-11-14 05:21:39,971 - DCRNN-Occupancy - INFO - Epoch 30, Batch 0/125, Loss: 0.7389, TF Ratio: 0.100
+2025-11-14 05:21:53,771 - DCRNN-Occupancy - INFO - Epoch 30, Batch 50/125, Loss: 0.3934, TF Ratio: 0.100
+2025-11-14 05:22:07,369 - DCRNN-Occupancy - INFO - Epoch 30, Batch 100/125, Loss: 0.5058, TF Ratio: 0.100
+2025-11-14 05:22:18,819 - DCRNN-Occupancy - INFO - Epoch 30: Train Loss: 0.5385, Val Loss: 0.6115, LR: 0.000391, Time: 42.0s
+2025-11-14 05:22:18,819 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-0.99, 1.83]
+2025-11-14 05:22:18,819 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.0, 356.3]명
+2025-11-14 05:22:18,893 - DCRNN-Occupancy - INFO - Best occupancy model saved: checkpoints/occupancy_model/best_occupancy_model.pth
+2025-11-14 05:22:18,964 - DCRNN-Occupancy - INFO - Best occupancy model saved: checkpoints/occupancy_model/best_occupancy_model.pth
+2025-11-14 05:22:21,636 - DCRNN-Occupancy - INFO - Epoch 31, Batch 0/125, Loss: 0.5552, TF Ratio: 0.100
+2025-11-14 05:22:34,794 - DCRNN-Occupancy - INFO - Epoch 31, Batch 50/125, Loss: 0.0728, TF Ratio: 0.100
+2025-11-14 05:22:47,915 - DCRNN-Occupancy - INFO - Epoch 31, Batch 100/125, Loss: 0.6915, TF Ratio: 0.100
+2025-11-14 05:22:59,534 - DCRNN-Occupancy - INFO - Epoch 31: Train Loss: 0.5347, Val Loss: 0.6137, LR: 0.000384, Time: 40.6s
+2025-11-14 05:22:59,534 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-1.00, 1.94]
+2025-11-14 05:22:59,534 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.1, 451.0]명
+2025-11-14 05:23:02,197 - DCRNN-Occupancy - INFO - Epoch 32, Batch 0/125, Loss: 0.6876, TF Ratio: 0.100
+2025-11-14 05:23:15,831 - DCRNN-Occupancy - INFO - Epoch 32, Batch 50/125, Loss: 0.4842, TF Ratio: 0.100
+2025-11-14 05:23:29,585 - DCRNN-Occupancy - INFO - Epoch 32, Batch 100/125, Loss: 0.5846, TF Ratio: 0.100
+2025-11-14 05:23:41,692 - DCRNN-Occupancy - INFO - Epoch 32: Train Loss: 0.5557, Val Loss: 0.6137, LR: 0.000378, Time: 42.2s
+2025-11-14 05:23:41,692 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-0.98, 1.77]
+2025-11-14 05:23:41,692 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.0, 317.0]명
+2025-11-14 05:23:44,466 - DCRNN-Occupancy - INFO - Epoch 33, Batch 0/125, Loss: 0.6243, TF Ratio: 0.100
+2025-11-14 05:23:59,276 - DCRNN-Occupancy - INFO - Epoch 33, Batch 50/125, Loss: 0.6469, TF Ratio: 0.100
+2025-11-14 05:24:14,446 - DCRNN-Occupancy - INFO - Epoch 33, Batch 100/125, Loss: 0.7059, TF Ratio: 0.100
+2025-11-14 05:24:28,158 - DCRNN-Occupancy - INFO - Epoch 33: Train Loss: 0.5417, Val Loss: 0.6114, LR: 0.000371, Time: 46.5s
+2025-11-14 05:24:28,158 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-0.98, 1.83]
+2025-11-14 05:24:28,158 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.0, 359.1]명
+2025-11-14 05:24:28,243 - DCRNN-Occupancy - INFO - Best occupancy model saved: checkpoints/occupancy_model/best_occupancy_model.pth
+2025-11-14 05:24:31,819 - DCRNN-Occupancy - INFO - Epoch 34, Batch 0/125, Loss: 0.6186, TF Ratio: 0.100
+2025-11-14 05:24:48,616 - DCRNN-Occupancy - INFO - Epoch 34, Batch 50/125, Loss: 0.7258, TF Ratio: 0.100
+2025-11-14 05:25:02,155 - DCRNN-Occupancy - INFO - Epoch 34, Batch 100/125, Loss: 0.4839, TF Ratio: 0.100
+2025-11-14 05:25:13,412 - DCRNN-Occupancy - INFO - Epoch 34: Train Loss: 0.5444, Val Loss: 0.6130, LR: 0.000364, Time: 45.2s
+2025-11-14 05:25:13,412 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-0.99, 1.86]
+2025-11-14 05:25:13,412 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.0, 376.6]명
+2025-11-14 05:25:16,057 - DCRNN-Occupancy - INFO - Epoch 35, Batch 0/125, Loss: 0.6169, TF Ratio: 0.100
+2025-11-14 05:25:31,247 - DCRNN-Occupancy - INFO - Epoch 35, Batch 50/125, Loss: 0.6760, TF Ratio: 0.100
+2025-11-14 05:25:46,452 - DCRNN-Occupancy - INFO - Epoch 35, Batch 100/125, Loss: 0.7938, TF Ratio: 0.100
+2025-11-14 05:25:59,911 - DCRNN-Occupancy - INFO - Epoch 35: Train Loss: 0.5774, Val Loss: 0.6112, LR: 0.000357, Time: 46.5s
+2025-11-14 05:25:59,911 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-0.99, 1.82]
+2025-11-14 05:25:59,911 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.1, 345.6]명
+2025-11-14 05:25:59,992 - DCRNN-Occupancy - INFO - Best occupancy model saved: checkpoints/occupancy_model/best_occupancy_model.pth
+2025-11-14 05:26:03,221 - DCRNN-Occupancy - INFO - Epoch 36, Batch 0/125, Loss: 0.6391, TF Ratio: 0.100
+2025-11-14 05:26:18,394 - DCRNN-Occupancy - INFO - Epoch 36, Batch 50/125, Loss: 0.6420, TF Ratio: 0.100
+2025-11-14 05:26:33,201 - DCRNN-Occupancy - INFO - Epoch 36, Batch 100/125, Loss: 0.0977, TF Ratio: 0.100
+2025-11-14 05:26:46,805 - DCRNN-Occupancy - INFO - Epoch 36: Train Loss: 0.5615, Val Loss: 0.6150, LR: 0.000350, Time: 46.8s
+2025-11-14 05:26:46,805 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-0.98, 1.89]
+2025-11-14 05:26:46,806 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.0, 406.1]명
+2025-11-14 05:26:49,981 - DCRNN-Occupancy - INFO - Epoch 37, Batch 0/125, Loss: 0.5916, TF Ratio: 0.100
+2025-11-14 05:27:06,444 - DCRNN-Occupancy - INFO - Epoch 37, Batch 50/125, Loss: 0.5826, TF Ratio: 0.100
+2025-11-14 05:27:23,380 - DCRNN-Occupancy - INFO - Epoch 37, Batch 100/125, Loss: 0.0380, TF Ratio: 0.100
+2025-11-14 05:27:37,517 - DCRNN-Occupancy - INFO - Epoch 37: Train Loss: 0.5632, Val Loss: 0.6121, LR: 0.000342, Time: 50.7s
+2025-11-14 05:27:37,517 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-0.98, 1.78]
+2025-11-14 05:27:37,518 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.0, 322.1]명
+2025-11-14 05:27:40,501 - DCRNN-Occupancy - INFO - Epoch 38, Batch 0/125, Loss: 0.1685, TF Ratio: 0.100
+2025-11-14 05:27:56,451 - DCRNN-Occupancy - INFO - Epoch 38, Batch 50/125, Loss: 0.7582, TF Ratio: 0.100
+2025-11-14 05:28:11,195 - DCRNN-Occupancy - INFO - Epoch 38, Batch 100/125, Loss: 0.6375, TF Ratio: 0.100
+2025-11-14 05:28:24,479 - DCRNN-Occupancy - INFO - Epoch 38: Train Loss: 0.5557, Val Loss: 0.6155, LR: 0.000335, Time: 47.0s
+2025-11-14 05:28:24,480 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-0.98, 1.84]
+2025-11-14 05:28:24,480 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.0, 362.9]명
+2025-11-14 05:28:27,135 - DCRNN-Occupancy - INFO - Epoch 39, Batch 0/125, Loss: 0.6448, TF Ratio: 0.100
+2025-11-14 05:28:40,649 - DCRNN-Occupancy - INFO - Epoch 39, Batch 50/125, Loss: 0.3669, TF Ratio: 0.100
+2025-11-14 05:28:53,872 - DCRNN-Occupancy - INFO - Epoch 39, Batch 100/125, Loss: 0.4620, TF Ratio: 0.100
+2025-11-14 05:29:06,608 - DCRNN-Occupancy - INFO - Epoch 39: Train Loss: 0.5451, Val Loss: 0.6125, LR: 0.000328, Time: 42.1s
+2025-11-14 05:29:06,609 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-0.98, 1.76]
+2025-11-14 05:29:06,609 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.0, 308.3]명
+2025-11-14 05:29:09,634 - DCRNN-Occupancy - INFO - Epoch 40, Batch 0/125, Loss: 0.6333, TF Ratio: 0.100
+2025-11-14 05:29:26,337 - DCRNN-Occupancy - INFO - Epoch 40, Batch 50/125, Loss: 0.5504, TF Ratio: 0.100
+2025-11-14 05:29:38,394 - DCRNN-Occupancy - INFO - 혼잡도 전용 데이터셋 로드 중...
+2025-11-14 05:29:38,518 - DCRNN-Occupancy - INFO - 계절별 균등 분할 완료:
+2025-11-14 05:29:38,518 - DCRNN-Occupancy - INFO -   Train: 166일
+2025-11-14 05:29:38,518 - DCRNN-Occupancy - INFO -   Val: 37일
+2025-11-14 05:29:38,518 - DCRNN-Occupancy - INFO -   Test: 40일
+2025-11-14 05:29:38,519 - DCRNN-Occupancy - INFO - 분할 정보 저장: data/seasonal_split.pkl
+2025-11-14 05:29:44,789 - DCRNN-Occupancy - INFO - Epoch 40, Batch 100/125, Loss: 0.5060, TF Ratio: 0.100
+2025-11-14 05:29:50,584 - DCRNN-Occupancy - INFO - Train batches: 125
+2025-11-14 05:29:50,584 - DCRNN-Occupancy - INFO - Val batches: 28
+2025-11-14 05:29:50,588 - DCRNN-Occupancy - INFO - 혼잡도 전용 DCRNN 모델 구성 중...
+2025-11-14 05:29:50,601 - DCRNN-Occupancy - INFO - Total parameters: 3,213,245
+2025-11-14 05:29:50,601 - DCRNN-Occupancy - INFO - Trainable parameters: 3,213,245
+2025-11-14 05:29:51,371 - DCRNN-Occupancy - INFO - 혼잡도 모델 훈련 설정 완료
+2025-11-14 05:29:51,371 - DCRNN-Occupancy - INFO - 혼잡도 모델 훈련 시작...
+2025-11-14 05:29:51,371 - DCRNN-Occupancy - INFO - 총 300 에포크 훈련 예정
+2025-11-14 05:29:51,371 - DCRNN-Occupancy - INFO - 시작 에포크: 0
+2025-11-14 05:29:51,371 - DCRNN-Occupancy - INFO - 디바이스: cpu
+2025-11-14 05:30:02,867 - DCRNN-Occupancy - INFO - Epoch 40: Train Loss: 0.5736, Val Loss: 0.6115, LR: 0.000320, Time: 56.3s
+2025-11-14 05:30:02,869 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-1.00, 1.77]
+2025-11-14 05:30:02,869 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.1, 315.9]명
+2025-11-14 05:30:03,276 - DCRNN-Occupancy - INFO - 첫 배치 처리 시작 - X shape: torch.Size([16, 12, 22, 31]), Y shape: torch.Size([16, 22, 1])
+2025-11-14 05:30:03,768 - DCRNN-Occupancy - INFO - 🔍 Teacher Forcing 없이 예측 범위: [-0.313, 0.217]
+2025-11-14 05:30:03,768 - DCRNN-Occupancy - INFO - 🔍 Teacher Forcing 99%로 예측 범위: [-0.315, 0.178]
+2025-11-14 05:30:04,006 - DCRNN-Occupancy - INFO - Epoch 0, Batch 0/125, Loss: 0.9564, TF Ratio: 0.700
+2025-11-14 05:30:07,486 - DCRNN-Occupancy - INFO - Epoch 41, Batch 0/125, Loss: 0.7406, TF Ratio: 0.100
+2025-11-14 05:30:33,161 - DCRNN-Occupancy - INFO - Epoch 0, Batch 50/125, Loss: 0.8790, TF Ratio: 0.700
+2025-11-14 05:30:37,269 - DCRNN-Occupancy - INFO - Epoch 41, Batch 50/125, Loss: 0.5927, TF Ratio: 0.100
+2025-11-14 05:31:00,484 - DCRNN-Occupancy - INFO - 혼잡도 전용 데이터셋 로드 중...
+2025-11-14 05:31:00,582 - DCRNN-Occupancy - INFO - 계절별 균등 분할 완료:
+2025-11-14 05:31:00,582 - DCRNN-Occupancy - INFO -   Train: 166일
+2025-11-14 05:31:00,582 - DCRNN-Occupancy - INFO -   Val: 37일
+2025-11-14 05:31:00,582 - DCRNN-Occupancy - INFO -   Test: 40일
+2025-11-14 05:31:00,582 - DCRNN-Occupancy - INFO - 분할 정보 저장: data/seasonal_split.pkl
+2025-11-14 05:31:10,065 - DCRNN-Occupancy - INFO - Train batches: 249
+2025-11-14 05:31:10,065 - DCRNN-Occupancy - INFO - Val batches: 56
+2025-11-14 05:31:10,067 - DCRNN-Occupancy - INFO - 혼잡도 전용 DCRNN 모델 구성 중...
+2025-11-14 05:31:10,070 - DCRNN-Occupancy - INFO - Total parameters: 565,949
+2025-11-14 05:31:10,070 - DCRNN-Occupancy - INFO - Trainable parameters: 565,949
+2025-11-14 05:31:10,655 - DCRNN-Occupancy - INFO - 혼잡도 모델 훈련 설정 완료
+2025-11-14 05:31:10,655 - DCRNN-Occupancy - INFO - 혼잡도 모델 훈련 시작...
+2025-11-14 05:31:10,655 - DCRNN-Occupancy - INFO - 총 100 에포크 훈련 예정
+2025-11-14 05:31:10,655 - DCRNN-Occupancy - INFO - 시작 에포크: 0
+2025-11-14 05:31:10,655 - DCRNN-Occupancy - INFO - 디바이스: cpu
+2025-11-14 05:31:10,714 - DCRNN-Occupancy - INFO - 첫 배치 처리 시작 - X shape: torch.Size([8, 12, 22, 31]), Y shape: torch.Size([8, 22, 1])
+2025-11-14 05:31:10,767 - DCRNN-Occupancy - INFO - 🔍 Teacher Forcing 없이 예측 범위: [0.038, 0.590]
+2025-11-14 05:31:10,767 - DCRNN-Occupancy - INFO - 🔍 Teacher Forcing 99%로 예측 범위: [0.062, 0.635]
+2025-11-14 05:31:10,824 - DCRNN-Occupancy - INFO - Epoch 0, Batch 0/249, Loss: 1.0205, TF Ratio: 0.700
+2025-11-14 05:31:17,287 - DCRNN-Occupancy - INFO - Epoch 0, Batch 50/249, Loss: 0.1086, TF Ratio: 0.700
+2025-11-14 05:31:23,483 - DCRNN-Occupancy - INFO - Epoch 0, Batch 100/249, Loss: 0.1072, TF Ratio: 0.700
+2025-11-14 05:31:29,725 - DCRNN-Occupancy - INFO - Epoch 0, Batch 150/249, Loss: 0.0735, TF Ratio: 0.700
+2025-11-14 05:31:36,515 - DCRNN-Occupancy - INFO - Epoch 0, Batch 200/249, Loss: 0.0737, TF Ratio: 0.700
+2025-11-14 05:31:47,384 - DCRNN-Occupancy - INFO - Epoch 0: Train Loss: 0.3455, Val Loss: 0.6613, LR: 0.000500, Time: 36.7s
+2025-11-14 05:31:47,385 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-1.55, 2.24]
+2025-11-14 05:31:47,385 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.7, 842.6]명
+2025-11-14 05:31:47,411 - DCRNN-Occupancy - INFO - Best occupancy model saved: checkpoints/occupancy_model/best_occupancy_model.pth
+2025-11-14 05:31:47,431 - DCRNN-Occupancy - INFO - Best occupancy model saved: checkpoints/occupancy_model/best_occupancy_model.pth
+2025-11-14 05:31:47,553 - DCRNN-Occupancy - INFO - Epoch 1, Batch 0/249, Loss: 0.0719, TF Ratio: 0.685
+2025-11-14 05:31:54,054 - DCRNN-Occupancy - INFO - Epoch 1, Batch 50/249, Loss: 0.5116, TF Ratio: 0.685
+2025-11-14 05:32:00,838 - DCRNN-Occupancy - INFO - Epoch 1, Batch 100/249, Loss: 0.3787, TF Ratio: 0.685
+2025-11-14 05:32:06,857 - DCRNN-Occupancy - INFO - Epoch 1, Batch 150/249, Loss: 0.0501, TF Ratio: 0.685
+2025-11-14 05:32:13,149 - DCRNN-Occupancy - INFO - Epoch 1, Batch 200/249, Loss: 0.0611, TF Ratio: 0.685
+2025-11-14 05:32:23,530 - DCRNN-Occupancy - INFO - Epoch 1: Train Loss: 0.2623, Val Loss: 0.6423, LR: 0.000500, Time: 36.1s
+2025-11-14 05:32:23,530 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-1.16, 2.38]
+2025-11-14 05:32:23,530 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.3, 1139.3]명
+2025-11-14 05:32:23,555 - DCRNN-Occupancy - INFO - Best occupancy model saved: checkpoints/occupancy_model/best_occupancy_model.pth
+2025-11-14 05:32:23,677 - DCRNN-Occupancy - INFO - Epoch 2, Batch 0/249, Loss: 0.0491, TF Ratio: 0.643
+2025-11-14 05:32:29,894 - DCRNN-Occupancy - INFO - Epoch 2, Batch 50/249, Loss: 0.0441, TF Ratio: 0.643
+2025-11-14 05:32:37,217 - DCRNN-Occupancy - INFO - Epoch 2, Batch 100/249, Loss: 0.0303, TF Ratio: 0.643
+2025-11-14 05:32:44,194 - DCRNN-Occupancy - INFO - Epoch 2, Batch 150/249, Loss: 0.0405, TF Ratio: 0.643
+2025-11-14 05:32:51,382 - DCRNN-Occupancy - INFO - Epoch 2, Batch 200/249, Loss: 0.0444, TF Ratio: 0.643
+2025-11-14 05:33:02,975 - DCRNN-Occupancy - INFO - Epoch 2: Train Loss: 0.2743, Val Loss: 0.6460, LR: 0.000499, Time: 39.4s
+2025-11-14 05:33:02,975 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-1.10, 2.46]
+2025-11-14 05:33:02,975 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.2, 1332.6]명
+2025-11-14 05:33:03,110 - DCRNN-Occupancy - INFO - Epoch 3, Batch 0/249, Loss: 0.8602, TF Ratio: 0.576
+2025-11-14 05:33:09,887 - DCRNN-Occupancy - INFO - Epoch 3, Batch 50/249, Loss: 0.0448, TF Ratio: 0.576
+2025-11-14 05:33:16,632 - DCRNN-Occupancy - INFO - Epoch 3, Batch 100/249, Loss: 0.0410, TF Ratio: 0.576
+2025-11-14 05:33:23,043 - DCRNN-Occupancy - INFO - Epoch 3, Batch 150/249, Loss: 0.0317, TF Ratio: 0.576
+2025-11-14 05:33:29,940 - DCRNN-Occupancy - INFO - Epoch 3, Batch 200/249, Loss: 0.4976, TF Ratio: 0.576
+2025-11-14 05:33:40,683 - DCRNN-Occupancy - INFO - Epoch 3: Train Loss: 0.3238, Val Loss: 0.6855, LR: 0.000498, Time: 37.7s
+2025-11-14 05:33:40,684 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-1.11, 2.37]
+2025-11-14 05:33:40,684 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.3, 1113.8]명
+2025-11-14 05:33:40,806 - DCRNN-Occupancy - INFO - Epoch 4, Batch 0/249, Loss: 0.0458, TF Ratio: 0.493
+2025-11-14 05:33:46,943 - DCRNN-Occupancy - INFO - Epoch 4, Batch 50/249, Loss: 0.0242, TF Ratio: 0.493
+2025-11-14 05:33:52,955 - DCRNN-Occupancy - INFO - Epoch 4, Batch 100/249, Loss: 0.0357, TF Ratio: 0.493
+2025-11-14 05:33:59,193 - DCRNN-Occupancy - INFO - Epoch 4, Batch 150/249, Loss: 0.0284, TF Ratio: 0.493
+2025-11-14 05:34:06,086 - DCRNN-Occupancy - INFO - Epoch 4, Batch 200/249, Loss: 0.6737, TF Ratio: 0.493
+2025-11-14 05:34:17,147 - DCRNN-Occupancy - INFO - Epoch 4: Train Loss: 0.3307, Val Loss: 0.6302, LR: 0.000497, Time: 36.5s
+2025-11-14 05:34:17,148 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-1.02, 2.45]
+2025-11-14 05:34:17,148 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.1, 1307.7]명
+2025-11-14 05:34:17,168 - DCRNN-Occupancy - INFO - Best occupancy model saved: checkpoints/occupancy_model/best_occupancy_model.pth
+2025-11-14 05:34:17,304 - DCRNN-Occupancy - INFO - Epoch 5, Batch 0/249, Loss: 0.0349, TF Ratio: 0.400
+2025-11-14 05:34:24,252 - DCRNN-Occupancy - INFO - Epoch 5, Batch 50/249, Loss: 0.7186, TF Ratio: 0.400
+2025-11-14 05:34:31,675 - DCRNN-Occupancy - INFO - Epoch 5, Batch 100/249, Loss: 0.0278, TF Ratio: 0.400
+2025-11-14 05:34:38,613 - DCRNN-Occupancy - INFO - Epoch 5, Batch 150/249, Loss: 0.0309, TF Ratio: 0.400
+2025-11-14 05:34:45,452 - DCRNN-Occupancy - INFO - Epoch 5, Batch 200/249, Loss: 0.6662, TF Ratio: 0.400
+2025-11-14 05:34:56,785 - DCRNN-Occupancy - INFO - Epoch 5: Train Loss: 0.3935, Val Loss: 0.6642, LR: 0.000496, Time: 39.6s
+2025-11-14 05:34:56,785 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-1.05, 2.37]
+2025-11-14 05:34:56,785 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.2, 1118.2]명
+2025-11-14 05:34:56,914 - DCRNN-Occupancy - INFO - Epoch 6, Batch 0/249, Loss: 0.7124, TF Ratio: 0.307
+2025-11-14 05:35:03,760 - DCRNN-Occupancy - INFO - Epoch 6, Batch 50/249, Loss: 0.6175, TF Ratio: 0.307
+2025-11-14 05:35:11,184 - DCRNN-Occupancy - INFO - Epoch 6, Batch 100/249, Loss: 0.5362, TF Ratio: 0.307
+2025-11-14 05:35:17,584 - DCRNN-Occupancy - INFO - Epoch 6, Batch 150/249, Loss: 0.6665, TF Ratio: 0.307
+2025-11-14 05:35:24,105 - DCRNN-Occupancy - INFO - Epoch 6, Batch 200/249, Loss: 0.4418, TF Ratio: 0.307
+2025-11-14 05:35:35,427 - DCRNN-Occupancy - INFO - Epoch 6: Train Loss: 0.4535, Val Loss: 0.6279, LR: 0.000494, Time: 38.6s
+2025-11-14 05:35:35,428 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-1.01, 2.37]
+2025-11-14 05:35:35,428 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.1, 1102.2]명
+2025-11-14 05:35:35,449 - DCRNN-Occupancy - INFO - Best occupancy model saved: checkpoints/occupancy_model/best_occupancy_model.pth
+2025-11-14 05:35:35,584 - DCRNN-Occupancy - INFO - Epoch 7, Batch 0/249, Loss: 0.6144, TF Ratio: 0.224
+2025-11-14 05:35:42,675 - DCRNN-Occupancy - INFO - Epoch 7, Batch 50/249, Loss: 0.3927, TF Ratio: 0.224
+2025-11-14 05:35:49,956 - DCRNN-Occupancy - INFO - Epoch 7, Batch 100/249, Loss: 0.5770, TF Ratio: 0.224
+2025-11-14 05:35:57,595 - DCRNN-Occupancy - INFO - Epoch 7, Batch 150/249, Loss: 0.6354, TF Ratio: 0.224
+2025-11-14 05:36:04,746 - DCRNN-Occupancy - INFO - Epoch 7, Batch 200/249, Loss: 0.8731, TF Ratio: 0.224
+2025-11-14 05:36:15,665 - DCRNN-Occupancy - INFO - Epoch 7: Train Loss: 0.4846, Val Loss: 0.6194, LR: 0.000492, Time: 40.2s
+2025-11-14 05:36:15,665 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-1.01, 2.34]
+2025-11-14 05:36:15,666 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.1, 1041.8]명
+2025-11-14 05:36:15,686 - DCRNN-Occupancy - INFO - Best occupancy model saved: checkpoints/occupancy_model/best_occupancy_model.pth
+2025-11-14 05:36:15,815 - DCRNN-Occupancy - INFO - Epoch 8, Batch 0/249, Loss: 0.7320, TF Ratio: 0.157
+2025-11-14 05:36:22,240 - DCRNN-Occupancy - INFO - Epoch 8, Batch 50/249, Loss: 0.0343, TF Ratio: 0.157
+2025-11-14 05:36:28,677 - DCRNN-Occupancy - INFO - Epoch 8, Batch 100/249, Loss: 0.8420, TF Ratio: 0.157
+2025-11-14 05:36:35,129 - DCRNN-Occupancy - INFO - Epoch 8, Batch 150/249, Loss: 0.8420, TF Ratio: 0.157
+2025-11-14 05:36:41,656 - DCRNN-Occupancy - INFO - Epoch 8, Batch 200/249, Loss: 0.6670, TF Ratio: 0.157
+2025-11-14 05:36:52,670 - DCRNN-Occupancy - INFO - Epoch 8: Train Loss: 0.5266, Val Loss: 0.6292, LR: 0.000490, Time: 37.0s
+2025-11-14 05:36:52,670 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-0.99, 2.44]
+2025-11-14 05:36:52,670 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.1, 1297.8]명
+2025-11-14 05:36:52,800 - DCRNN-Occupancy - INFO - Epoch 9, Batch 0/249, Loss: 0.5295, TF Ratio: 0.115
+2025-11-14 05:36:59,564 - DCRNN-Occupancy - INFO - Epoch 9, Batch 50/249, Loss: 0.0324, TF Ratio: 0.115
+2025-11-14 05:37:06,264 - DCRNN-Occupancy - INFO - Epoch 9, Batch 100/249, Loss: 0.8086, TF Ratio: 0.115
+2025-11-14 05:37:12,924 - DCRNN-Occupancy - INFO - Epoch 9, Batch 150/249, Loss: 0.4724, TF Ratio: 0.115
+2025-11-14 05:37:19,424 - DCRNN-Occupancy - INFO - Epoch 9, Batch 200/249, Loss: 0.4644, TF Ratio: 0.115
+2025-11-14 05:37:30,491 - DCRNN-Occupancy - INFO - Epoch 9: Train Loss: 0.5682, Val Loss: 0.6137, LR: 0.000488, Time: 37.8s
+2025-11-14 05:37:30,491 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-1.00, 2.34]
+2025-11-14 05:37:30,491 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.1, 1048.2]명
+2025-11-14 05:37:30,518 - DCRNN-Occupancy - INFO - Best occupancy model saved: checkpoints/occupancy_model/best_occupancy_model.pth
+2025-11-14 05:37:30,649 - DCRNN-Occupancy - INFO - Epoch 10, Batch 0/249, Loss: 0.6464, TF Ratio: 0.100
+2025-11-14 05:37:37,096 - DCRNN-Occupancy - INFO - Epoch 10, Batch 50/249, Loss: 0.8034, TF Ratio: 0.100
+2025-11-14 05:37:43,642 - DCRNN-Occupancy - INFO - Epoch 10, Batch 100/249, Loss: 0.4212, TF Ratio: 0.100
+2025-11-14 05:37:49,869 - DCRNN-Occupancy - INFO - Epoch 10, Batch 150/249, Loss: 0.4416, TF Ratio: 0.100
+2025-11-14 05:37:56,448 - DCRNN-Occupancy - INFO - Epoch 10, Batch 200/249, Loss: 0.5352, TF Ratio: 0.100
+2025-11-14 05:38:07,387 - DCRNN-Occupancy - INFO - Epoch 10: Train Loss: 0.5511, Val Loss: 0.6136, LR: 0.000485, Time: 36.9s
+2025-11-14 05:38:07,387 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-1.01, 2.33]
+2025-11-14 05:38:07,387 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.1, 1018.9]명
+2025-11-14 05:38:07,408 - DCRNN-Occupancy - INFO - Best occupancy model saved: checkpoints/occupancy_model/best_occupancy_model.pth
+2025-11-14 05:38:07,425 - DCRNN-Occupancy - INFO - Best occupancy model saved: checkpoints/occupancy_model/best_occupancy_model.pth
+2025-11-14 05:38:07,546 - DCRNN-Occupancy - INFO - Epoch 11, Batch 0/249, Loss: 0.6878, TF Ratio: 0.100
+2025-11-14 05:38:14,129 - DCRNN-Occupancy - INFO - Epoch 11, Batch 50/249, Loss: 0.8100, TF Ratio: 0.100
+2025-11-14 05:38:20,623 - DCRNN-Occupancy - INFO - Epoch 11, Batch 100/249, Loss: 0.5714, TF Ratio: 0.100
+2025-11-14 05:38:27,314 - DCRNN-Occupancy - INFO - Epoch 11, Batch 150/249, Loss: 0.4609, TF Ratio: 0.100
+2025-11-14 05:38:33,671 - DCRNN-Occupancy - INFO - Epoch 11, Batch 200/249, Loss: 0.0520, TF Ratio: 0.100
+2025-11-14 05:38:44,095 - DCRNN-Occupancy - INFO - Epoch 11: Train Loss: 0.5862, Val Loss: 0.6222, LR: 0.000482, Time: 36.7s
+2025-11-14 05:38:44,095 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-0.99, 2.37]
+2025-11-14 05:38:44,095 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.1, 1102.8]명
+2025-11-14 05:38:44,213 - DCRNN-Occupancy - INFO - Epoch 12, Batch 0/249, Loss: 0.4993, TF Ratio: 0.100
+2025-11-14 05:38:50,543 - DCRNN-Occupancy - INFO - Epoch 12, Batch 50/249, Loss: 0.0349, TF Ratio: 0.100
+2025-11-14 05:40:27,122 - DCRNN-Occupancy - INFO - Epoch 12, Batch 100/249, Loss: 0.8240, TF Ratio: 0.100
+2025-11-14 05:40:34,558 - DCRNN-Occupancy - INFO - Epoch 12, Batch 150/249, Loss: 0.5022, TF Ratio: 0.100
+2025-11-14 05:43:18,037 - DCRNN-Occupancy - INFO - Epoch 12, Batch 200/249, Loss: 0.7348, TF Ratio: 0.100
+2025-11-14 05:43:28,452 - DCRNN-Occupancy - INFO - Epoch 12: Train Loss: 0.5576, Val Loss: 0.6131, LR: 0.000479, Time: 284.4s
+2025-11-14 05:43:28,453 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-1.00, 2.39]
+2025-11-14 05:43:28,453 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.1, 1167.0]명
+2025-11-14 05:43:28,473 - DCRNN-Occupancy - INFO - Best occupancy model saved: checkpoints/occupancy_model/best_occupancy_model.pth
+2025-11-14 05:43:28,590 - DCRNN-Occupancy - INFO - Epoch 13, Batch 0/249, Loss: 0.2691, TF Ratio: 0.100
+2025-11-14 05:43:34,375 - DCRNN-Occupancy - INFO - Epoch 13, Batch 50/249, Loss: 0.6815, TF Ratio: 0.100
+2025-11-14 05:43:40,808 - DCRNN-Occupancy - INFO - Epoch 13, Batch 100/249, Loss: 0.8387, TF Ratio: 0.100
+2025-11-14 05:43:46,847 - DCRNN-Occupancy - INFO - Epoch 13, Batch 150/249, Loss: 0.7695, TF Ratio: 0.100
+2025-11-14 05:43:53,261 - DCRNN-Occupancy - INFO - Epoch 13, Batch 200/249, Loss: 0.5565, TF Ratio: 0.100
+2025-11-14 05:44:03,556 - DCRNN-Occupancy - INFO - Epoch 13: Train Loss: 0.5765, Val Loss: 0.6115, LR: 0.000476, Time: 35.1s
+2025-11-14 05:44:03,557 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-1.07, 2.35]
+2025-11-14 05:44:03,557 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.2, 1074.8]명
+2025-11-14 05:44:03,574 - DCRNN-Occupancy - INFO - Best occupancy model saved: checkpoints/occupancy_model/best_occupancy_model.pth
+2025-11-14 05:44:03,695 - DCRNN-Occupancy - INFO - Epoch 14, Batch 0/249, Loss: 0.5263, TF Ratio: 0.100
+2025-11-14 05:44:09,841 - DCRNN-Occupancy - INFO - Epoch 14, Batch 50/249, Loss: 0.6165, TF Ratio: 0.100
+2025-11-14 05:44:16,112 - DCRNN-Occupancy - INFO - Epoch 14, Batch 100/249, Loss: 0.6728, TF Ratio: 0.100
+2025-11-14 05:44:22,287 - DCRNN-Occupancy - INFO - Epoch 14, Batch 150/249, Loss: 0.4744, TF Ratio: 0.100
+2025-11-14 05:44:28,694 - DCRNN-Occupancy - INFO - Epoch 14, Batch 200/249, Loss: 0.8747, TF Ratio: 0.100
+2025-11-14 05:44:39,266 - DCRNN-Occupancy - INFO - Epoch 14: Train Loss: 0.5539, Val Loss: 0.6151, LR: 0.000473, Time: 35.7s
+2025-11-14 05:44:39,266 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-1.00, 2.27]
+2025-11-14 05:44:39,266 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.1, 907.5]명
+2025-11-14 05:44:39,384 - DCRNN-Occupancy - INFO - Epoch 15, Batch 0/249, Loss: 0.1070, TF Ratio: 0.100
+2025-11-14 05:44:45,208 - DCRNN-Occupancy - INFO - Epoch 15, Batch 50/249, Loss: 0.8261, TF Ratio: 0.100
+2025-11-14 05:44:50,249 - DCRNN-Occupancy - INFO - 혼잡도 전용 데이터셋 로드 중...
+2025-11-14 05:44:50,344 - DCRNN-Occupancy - INFO - 계절별 균등 분할 완료:
+2025-11-14 05:44:50,344 - DCRNN-Occupancy - INFO -   Train: 166일
+2025-11-14 05:44:50,344 - DCRNN-Occupancy - INFO -   Val: 37일
+2025-11-14 05:44:50,344 - DCRNN-Occupancy - INFO -   Test: 40일
+2025-11-14 05:44:50,344 - DCRNN-Occupancy - INFO - 분할 정보 저장: data/seasonal_split.pkl
+2025-11-14 05:44:52,001 - DCRNN-Occupancy - INFO - Epoch 15, Batch 100/249, Loss: 0.9014, TF Ratio: 0.100
+2025-11-14 05:45:03,818 - DCRNN-Occupancy - INFO - 혼잡도 전용 데이터셋 로드 중...
+2025-11-14 05:45:03,905 - DCRNN-Occupancy - INFO - 계절별 균등 분할 완료:
+2025-11-14 05:45:03,905 - DCRNN-Occupancy - INFO -   Train: 166일
+2025-11-14 05:45:03,905 - DCRNN-Occupancy - INFO -   Val: 37일
+2025-11-14 05:45:03,905 - DCRNN-Occupancy - INFO -   Test: 40일
+2025-11-14 05:45:03,906 - DCRNN-Occupancy - INFO - 분할 정보 저장: data/seasonal_split.pkl
+2025-11-14 05:45:12,951 - DCRNN-Occupancy - INFO - Train batches: 249
+2025-11-14 05:45:12,951 - DCRNN-Occupancy - INFO - Val batches: 56
+2025-11-14 05:45:12,954 - DCRNN-Occupancy - INFO - 혼잡도 전용 DCRNN 모델 구성 중...
+2025-11-14 05:45:12,955 - DCRNN-Occupancy - INFO - Total parameters: 565,949
+2025-11-14 05:45:12,955 - DCRNN-Occupancy - INFO - Trainable parameters: 565,949
+2025-11-14 05:45:13,521 - DCRNN-Occupancy - INFO - 혼잡도 모델 훈련 설정 완료
+2025-11-14 05:45:13,521 - DCRNN-Occupancy - INFO - 혼잡도 모델 훈련 시작...
+2025-11-14 05:45:13,521 - DCRNN-Occupancy - INFO - 총 100 에포크 훈련 예정
+2025-11-14 05:45:13,521 - DCRNN-Occupancy - INFO - 시작 에포크: 0
+2025-11-14 05:45:13,521 - DCRNN-Occupancy - INFO - 디바이스: cpu
+2025-11-14 05:45:13,578 - DCRNN-Occupancy - INFO - 첫 배치 처리 시작 - X shape: torch.Size([8, 12, 22, 31]), Y shape: torch.Size([8, 22, 1])
+2025-11-14 05:45:13,635 - DCRNN-Occupancy - INFO - 🔍 Teacher Forcing 없이 예측 범위: [-0.273, 0.336]
+2025-11-14 05:45:13,635 - DCRNN-Occupancy - INFO - 🔍 Teacher Forcing 99%로 예측 범위: [-0.323, 0.256]
+2025-11-14 05:45:13,690 - DCRNN-Occupancy - INFO - Epoch 0, Batch 0/249, Loss: 1.0238, TF Ratio: 0.700
+2025-11-14 05:45:20,184 - DCRNN-Occupancy - INFO - Epoch 0, Batch 50/249, Loss: 0.1216, TF Ratio: 0.700
+2025-11-14 05:45:21,668 - DCRNN-Occupancy - INFO - 혼잡도 전용 데이터셋 로드 중...
+2025-11-14 05:45:21,767 - DCRNN-Occupancy - INFO - 계절별 균등 분할 완료:
+2025-11-14 05:45:21,767 - DCRNN-Occupancy - INFO -   Train: 166일
+2025-11-14 05:45:21,767 - DCRNN-Occupancy - INFO -   Val: 37일
+2025-11-14 05:45:21,767 - DCRNN-Occupancy - INFO -   Test: 40일
+2025-11-14 05:45:21,767 - DCRNN-Occupancy - INFO - 분할 정보 저장: data/seasonal_split.pkl
+2025-11-14 05:45:26,347 - DCRNN-Occupancy - INFO - Epoch 0, Batch 100/249, Loss: 0.0998, TF Ratio: 0.700
+2025-11-14 05:45:32,428 - DCRNN-Occupancy - INFO - Train batches: 249
+2025-11-14 05:45:32,429 - DCRNN-Occupancy - INFO - Val batches: 56
+2025-11-14 05:45:32,432 - DCRNN-Occupancy - INFO - 혼잡도 전용 DCRNN 모델 구성 중...
+2025-11-14 05:45:32,434 - DCRNN-Occupancy - INFO - Total parameters: 565,949
+2025-11-14 05:45:32,435 - DCRNN-Occupancy - INFO - Trainable parameters: 565,949
+2025-11-14 05:45:32,883 - DCRNN-Occupancy - INFO - Epoch 0, Batch 150/249, Loss: 0.0993, TF Ratio: 0.700
+2025-11-14 05:45:33,053 - DCRNN-Occupancy - INFO - 혼잡도 모델 훈련 설정 완료
+2025-11-14 05:47:29,686 - DCRNN-Occupancy - INFO - 혼잡도 전용 데이터셋 로드 중...
+2025-11-14 05:47:29,792 - DCRNN-Occupancy - INFO - 계절별 균등 분할 완료:
+2025-11-14 05:47:29,792 - DCRNN-Occupancy - INFO -   Train: 166일
+2025-11-14 05:47:29,793 - DCRNN-Occupancy - INFO -   Val: 37일
+2025-11-14 05:47:29,793 - DCRNN-Occupancy - INFO -   Test: 40일
+2025-11-14 05:47:29,793 - DCRNN-Occupancy - INFO - 분할 정보 저장: data/seasonal_split.pkl
+2025-11-14 05:47:38,396 - DCRNN-Occupancy - INFO - Train batches: 249
+2025-11-14 05:47:38,396 - DCRNN-Occupancy - INFO - Val batches: 56
+2025-11-14 05:47:38,399 - DCRNN-Occupancy - INFO - 혼잡도 전용 DCRNN 모델 구성 중...
+2025-11-14 05:47:38,402 - DCRNN-Occupancy - INFO - Total parameters: 565,949
+2025-11-14 05:47:38,402 - DCRNN-Occupancy - INFO - Trainable parameters: 565,949
+2025-11-14 05:47:39,269 - DCRNN-Occupancy - INFO - 혼잡도 모델 훈련 설정 완료
+2025-11-14 05:48:53,831 - DCRNN-Occupancy - INFO - 혼잡도 전용 데이터셋 로드 중...
+2025-11-14 05:48:53,925 - DCRNN-Occupancy - INFO - 계절별 균등 분할 완료:
+2025-11-14 05:48:53,925 - DCRNN-Occupancy - INFO -   Train: 166일
+2025-11-14 05:48:53,925 - DCRNN-Occupancy - INFO -   Val: 37일
+2025-11-14 05:48:53,925 - DCRNN-Occupancy - INFO -   Test: 40일
+2025-11-14 05:48:53,925 - DCRNN-Occupancy - INFO - 분할 정보 저장: data/seasonal_split.pkl
+2025-11-14 05:49:03,116 - DCRNN-Occupancy - INFO - Train batches: 249
+2025-11-14 05:49:03,116 - DCRNN-Occupancy - INFO - Val batches: 56
+2025-11-14 05:49:03,119 - DCRNN-Occupancy - INFO - 혼잡도 전용 DCRNN 모델 구성 중...
+2025-11-14 05:49:03,124 - DCRNN-Occupancy - INFO - Total parameters: 565,949
+2025-11-14 05:49:03,124 - DCRNN-Occupancy - INFO - Trainable parameters: 565,949
+2025-11-14 05:49:03,651 - DCRNN-Occupancy - INFO - 혼잡도 모델 훈련 설정 완료
+2025-11-14 05:49:03,652 - DCRNN-Occupancy - INFO - 혼잡도 모델 훈련 시작...
+2025-11-14 05:49:03,652 - DCRNN-Occupancy - INFO - 총 100 에포크 훈련 예정
+2025-11-14 05:49:03,652 - DCRNN-Occupancy - INFO - 시작 에포크: 0
+2025-11-14 05:49:03,652 - DCRNN-Occupancy - INFO - 디바이스: cpu
+2025-11-14 05:49:03,719 - DCRNN-Occupancy - INFO - 첫 배치 처리 시작 - X shape: torch.Size([8, 12, 22, 31]), Y shape: torch.Size([8, 22, 1])
+2025-11-14 05:49:03,784 - DCRNN-Occupancy - INFO - 🔍 Teacher Forcing 없이 예측 범위: [-0.273, 0.336]
+2025-11-14 05:49:03,784 - DCRNN-Occupancy - INFO - 🔍 Teacher Forcing 99%로 예측 범위: [-0.323, 0.256]
+2025-11-14 05:49:03,850 - DCRNN-Occupancy - INFO - Epoch 0, Batch 0/249, Loss: 1.0238, TF Ratio: 0.700
+2025-11-14 05:49:09,732 - DCRNN-Occupancy - INFO - Epoch 0, Batch 50/249, Loss: 0.1216, TF Ratio: 0.700
+2025-11-14 05:49:15,531 - DCRNN-Occupancy - INFO - Epoch 0, Batch 100/249, Loss: 0.0998, TF Ratio: 0.700
+2025-11-14 05:49:21,289 - DCRNN-Occupancy - INFO - Epoch 0, Batch 150/249, Loss: 0.0993, TF Ratio: 0.700
+2025-11-14 05:49:27,019 - DCRNN-Occupancy - INFO - Epoch 0, Batch 200/249, Loss: 0.1024, TF Ratio: 0.700
+2025-11-14 05:49:37,146 - DCRNN-Occupancy - INFO - Epoch 0: Train Loss: 0.3564, Val Loss: 0.6597, LR: 0.000500, Time: 33.5s
+2025-11-14 05:49:37,148 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-1.86, 2.18]
+2025-11-14 05:49:37,148 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.8, 750.8]명
+2025-11-14 05:49:37,166 - DCRNN-Occupancy - INFO - Best occupancy model saved: checkpoints/occupancy_model/best_occupancy_model.pth
+2025-11-14 05:49:37,180 - DCRNN-Occupancy - INFO - Best occupancy model saved: checkpoints/occupancy_model/best_occupancy_model.pth
+2025-11-14 05:49:37,297 - DCRNN-Occupancy - INFO - Epoch 1, Batch 0/249, Loss: 0.0697, TF Ratio: 0.685
+2025-11-14 05:49:43,057 - DCRNN-Occupancy - INFO - Epoch 1, Batch 50/249, Loss: 0.4754, TF Ratio: 0.685
+2025-11-14 05:49:49,007 - DCRNN-Occupancy - INFO - Epoch 1, Batch 100/249, Loss: 0.4117, TF Ratio: 0.685
+2025-11-14 05:49:54,828 - DCRNN-Occupancy - INFO - Epoch 1, Batch 150/249, Loss: 0.0478, TF Ratio: 0.685
+2025-11-14 05:50:00,823 - DCRNN-Occupancy - INFO - Epoch 1, Batch 200/249, Loss: 0.0650, TF Ratio: 0.685
+2025-11-14 05:50:10,733 - DCRNN-Occupancy - INFO - Epoch 1: Train Loss: 0.2323, Val Loss: 0.4581, LR: 0.000500, Time: 33.6s
+2025-11-14 05:50:10,733 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-1.25, 2.35]
+2025-11-14 05:50:10,733 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.4, 1059.1]명
+2025-11-14 05:50:10,747 - DCRNN-Occupancy - INFO - Best occupancy model saved: checkpoints/occupancy_model/best_occupancy_model.pth
+2025-11-14 05:50:10,862 - DCRNN-Occupancy - INFO - Epoch 2, Batch 0/249, Loss: 0.0484, TF Ratio: 0.643
+2025-11-14 05:50:16,592 - DCRNN-Occupancy - INFO - Epoch 2, Batch 50/249, Loss: 0.0332, TF Ratio: 0.643
+2025-11-14 05:50:22,411 - DCRNN-Occupancy - INFO - Epoch 2, Batch 100/249, Loss: 0.0411, TF Ratio: 0.643
+2025-11-14 05:50:28,202 - DCRNN-Occupancy - INFO - Epoch 2, Batch 150/249, Loss: 0.0372, TF Ratio: 0.643
+2025-11-14 05:50:34,074 - DCRNN-Occupancy - INFO - Epoch 2, Batch 200/249, Loss: 0.0427, TF Ratio: 0.643
+2025-11-14 05:50:43,816 - DCRNN-Occupancy - INFO - Epoch 2: Train Loss: 0.1914, Val Loss: 0.4438, LR: 0.000499, Time: 33.1s
+2025-11-14 05:50:43,816 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-1.11, 2.34]
+2025-11-14 05:50:43,816 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.3, 1052.3]명
+2025-11-14 05:50:43,832 - DCRNN-Occupancy - INFO - Best occupancy model saved: checkpoints/occupancy_model/best_occupancy_model.pth
+2025-11-14 05:50:43,949 - DCRNN-Occupancy - INFO - Epoch 3, Batch 0/249, Loss: 0.6045, TF Ratio: 0.576
+2025-11-14 05:50:49,850 - DCRNN-Occupancy - INFO - Epoch 3, Batch 50/249, Loss: 0.0395, TF Ratio: 0.576
+2025-11-14 05:50:55,901 - DCRNN-Occupancy - INFO - Epoch 3, Batch 100/249, Loss: 0.0479, TF Ratio: 0.576
+2025-11-14 05:51:01,944 - DCRNN-Occupancy - INFO - Epoch 3, Batch 150/249, Loss: 0.0236, TF Ratio: 0.576
+2025-11-14 05:51:07,844 - DCRNN-Occupancy - INFO - Epoch 3, Batch 200/249, Loss: 0.2914, TF Ratio: 0.576
+2025-11-14 05:51:17,563 - DCRNN-Occupancy - INFO - Epoch 3: Train Loss: 0.2090, Val Loss: 0.3891, LR: 0.000498, Time: 33.7s
+2025-11-14 05:51:17,563 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-1.20, 2.35]
+2025-11-14 05:51:17,563 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.4, 1054.4]명
+2025-11-14 05:51:17,583 - DCRNN-Occupancy - INFO - Best occupancy model saved: checkpoints/occupancy_model/best_occupancy_model.pth
+2025-11-14 05:51:17,700 - DCRNN-Occupancy - INFO - Epoch 4, Batch 0/249, Loss: 0.0295, TF Ratio: 0.493
+2025-11-14 05:51:23,659 - DCRNN-Occupancy - INFO - Epoch 4, Batch 50/249, Loss: 0.0227, TF Ratio: 0.493
+2025-11-14 05:51:29,672 - DCRNN-Occupancy - INFO - Epoch 4, Batch 100/249, Loss: 0.0339, TF Ratio: 0.493
+2025-11-14 05:51:35,784 - DCRNN-Occupancy - INFO - Epoch 4, Batch 150/249, Loss: 0.0387, TF Ratio: 0.493
+2025-11-14 05:51:41,672 - DCRNN-Occupancy - INFO - Epoch 4, Batch 200/249, Loss: 0.3932, TF Ratio: 0.493
+2025-11-14 05:51:51,538 - DCRNN-Occupancy - INFO - Epoch 4: Train Loss: 0.2193, Val Loss: 0.3849, LR: 0.000497, Time: 34.0s
+2025-11-14 05:51:51,539 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-1.14, 2.42]
+2025-11-14 05:51:51,539 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.3, 1233.1]명
+2025-11-14 05:51:51,558 - DCRNN-Occupancy - INFO - Best occupancy model saved: checkpoints/occupancy_model/best_occupancy_model.pth
+2025-11-14 05:51:51,671 - DCRNN-Occupancy - INFO - Epoch 5, Batch 0/249, Loss: 0.0689, TF Ratio: 0.400
+2025-11-14 05:51:57,711 - DCRNN-Occupancy - INFO - Epoch 5, Batch 50/249, Loss: 0.4435, TF Ratio: 0.400
+2025-11-14 05:52:03,871 - DCRNN-Occupancy - INFO - Epoch 5, Batch 100/249, Loss: 0.0283, TF Ratio: 0.400
+2025-11-14 05:52:09,751 - DCRNN-Occupancy - INFO - Epoch 5, Batch 150/249, Loss: 0.0231, TF Ratio: 0.400
+2025-11-14 05:52:15,868 - DCRNN-Occupancy - INFO - Epoch 5, Batch 200/249, Loss: 0.3935, TF Ratio: 0.400
+2025-11-14 05:52:26,011 - DCRNN-Occupancy - INFO - Epoch 5: Train Loss: 0.2462, Val Loss: 0.3827, LR: 0.000496, Time: 34.5s
+2025-11-14 05:52:26,011 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-1.13, 2.40]
+2025-11-14 05:52:26,011 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.3, 1186.9]명
+2025-11-14 05:52:26,029 - DCRNN-Occupancy - INFO - Best occupancy model saved: checkpoints/occupancy_model/best_occupancy_model.pth
+2025-11-14 05:52:26,148 - DCRNN-Occupancy - INFO - Epoch 6, Batch 0/249, Loss: 0.3603, TF Ratio: 0.307
+2025-11-14 05:52:32,143 - DCRNN-Occupancy - INFO - Epoch 6, Batch 50/249, Loss: 0.4214, TF Ratio: 0.307
+2025-11-14 05:52:38,046 - DCRNN-Occupancy - INFO - Epoch 6, Batch 100/249, Loss: 0.3608, TF Ratio: 0.307
+2025-11-14 05:52:43,858 - DCRNN-Occupancy - INFO - Epoch 6, Batch 150/249, Loss: 0.3741, TF Ratio: 0.307
+2025-11-14 05:52:49,622 - DCRNN-Occupancy - INFO - Epoch 6, Batch 200/249, Loss: 0.2356, TF Ratio: 0.307
+2025-11-14 05:52:59,353 - DCRNN-Occupancy - INFO - Epoch 6: Train Loss: 0.2720, Val Loss: 0.3561, LR: 0.000494, Time: 33.3s
+2025-11-14 05:52:59,353 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-1.11, 2.36]
+2025-11-14 05:52:59,353 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.3, 1092.7]명
+2025-11-14 05:52:59,370 - DCRNN-Occupancy - INFO - Best occupancy model saved: checkpoints/occupancy_model/best_occupancy_model.pth
+2025-11-14 05:52:59,485 - DCRNN-Occupancy - INFO - Epoch 7, Batch 0/249, Loss: 0.3160, TF Ratio: 0.224
+2025-11-14 05:53:05,364 - DCRNN-Occupancy - INFO - Epoch 7, Batch 50/249, Loss: 0.3136, TF Ratio: 0.224
+2025-11-14 05:53:11,108 - DCRNN-Occupancy - INFO - Epoch 7, Batch 100/249, Loss: 0.3390, TF Ratio: 0.224
+2025-11-14 05:53:16,916 - DCRNN-Occupancy - INFO - Epoch 7, Batch 150/249, Loss: 0.3828, TF Ratio: 0.224
+2025-11-14 05:53:22,668 - DCRNN-Occupancy - INFO - Epoch 7, Batch 200/249, Loss: 0.4224, TF Ratio: 0.224
+2025-11-14 05:53:32,270 - DCRNN-Occupancy - INFO - Epoch 7: Train Loss: 0.2802, Val Loss: 0.3468, LR: 0.000492, Time: 32.9s
+2025-11-14 05:53:32,271 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (정규화): [-1.07, 2.37]
+2025-11-14 05:53:32,271 - DCRNN-Occupancy - INFO - 혼잡도 예측 범위 (실제): [-0.2, 1121.5]명
+2025-11-14 05:53:32,288 - DCRNN-Occupancy - INFO - Best occupancy model saved: checkpoints/occupancy_model/best_occupancy_model.pth
+2025-11-14 05:53:32,403 - DCRNN-Occupancy - INFO - Epoch 8, Batch 0/249, Loss: 0.3947, TF Ratio: 0.157
+2025-11-14 05:53:38,305 - DCRNN-Occupancy - INFO - Epoch 8, Batch 50/249, Loss: 0.0434, TF Ratio: 0.157
+2025-11-14 05:53:44,415 - DCRNN-Occupancy - INFO - Epoch 8, Batch 100/249, Loss: 0.4438, TF Ratio: 0.157
+2025-11-14 05:53:50,157 - DCRNN-Occupancy - INFO - Epoch 8, Batch 150/249, Loss: 0.4908, TF Ratio: 0.157

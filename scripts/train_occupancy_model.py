@@ -520,7 +520,7 @@ class OccupancyTrainer:
         
         self.logger.info("혼잡도 모델 훈련 설정 완료")
         
-    def _weighted_mae_loss(self, pred_norm, target_norm, raw_target, alpha=0.5, C=300.0):
+    def _weighted_mae_loss(self, pred_norm, target_norm, raw_target, alpha=0.1, C=500.0):
         """
         큰 혼잡도 값에 더 가중치를 주는 MAE Loss
         
@@ -528,8 +528,8 @@ class OccupancyTrainer:
             pred_norm: 정규화된 예측값 [B, N, 1]
             target_norm: 정규화된 타겟값 [B, N, 1]  
             raw_target: 원본 혼잡도 값 [B, N, 1] (명 단위)
-            alpha: 가중치 강도 (0.5 = 50% 추가 가중치, 과도한 bias 억제)
-            C: 가중치 스케일링 상수 (300명 기준, 더 완만한 가중치)
+            alpha: 가중치 강도 (0.1 = 10% 추가 가중치, collapse 방지) 🔥 0.5 → 0.1
+            C: 가중치 스케일링 상수 (500명 기준, 더 완만한 가중치) 🔥 300 → 500
         """
         # 기본 MAE
         base_loss = torch.abs(pred_norm - target_norm)
@@ -691,13 +691,19 @@ class OccupancyTrainer:
         checkpoint_dir = Path("checkpoints/occupancy_model")
         checkpoint_dir.mkdir(parents=True, exist_ok=True)
         
+        # 🔥 Config를 복사하고 실제 모델 구조로 업데이트
+        saved_config = self.config.copy()
+        saved_config['model'] = saved_config['model'].copy()
+        saved_config['model']['input_size'] = self.model.input_size  # 🔥 실제 모델 값
+        saved_config['model']['output_size'] = self.model.output_size  # 🔥 실제 모델 값
+        
         checkpoint = {
             'epoch': self.current_epoch,
             'model_state_dict': self.model.state_dict(),
             'optimizer_state_dict': self.optimizer.state_dict(),
             'scheduler_state_dict': self.scheduler.state_dict() if self.scheduler else None,
             'best_val_loss': self.best_val_loss,
-            'config': self.config
+            'config': saved_config  # 🔥 실제 모델 구조가 반영된 Config
         }
         
         # 일반 체크포인트

@@ -280,7 +280,8 @@ class DCRNN(nn.Module):
         # Decoder layers
         self.decoder_layers = nn.ModuleList()
         for i in range(num_layers):
-            layer_input_size = output_size if i == 0 else hidden_size
+            # 🔥 Decoder 첫 레이어도 input_size를 받도록 변경
+            layer_input_size = input_size if i == 0 else hidden_size
             self.decoder_layers.append(
                 DCGRUCell(layer_input_size, hidden_size, diffusion_steps)
             )
@@ -289,10 +290,16 @@ class DCRNN(nn.Module):
         if use_attention:
             self.attention = AttentionMechanism(hidden_size)
             # Context projection to match decoder input size
-            self.context_projection = nn.Linear(hidden_size, output_size)
+            self.context_projection = nn.Linear(hidden_size, input_size)  # 🔥 input_size로 변경
         
         # Output projection
         self.output_projection = nn.Linear(hidden_size, output_size)
+        
+        # 🔥 Output을 input_size 차원으로 확장하는 projection (다음 스텝 입력용)
+        self.output_to_input_projection = nn.Linear(output_size, input_size)
+        
+        # 🔥 Hidden state를 input_size 차원으로 projection (디코더 초기 입력용)
+        self.hidden_to_input_projection = nn.Linear(hidden_size, input_size)
         
         # Dropout
         self.dropout = nn.Dropout(dropout)
@@ -342,7 +349,8 @@ class DCRNN(nn.Module):
                adjacency: torch.Tensor,
                target_length: int,
                teacher_forcing_ratio: float = 0.0,
-               targets: Optional[torch.Tensor] = None) -> Tuple[torch.Tensor, torch.Tensor]:
+               targets: Optional[torch.Tensor] = None,
+               initial_input: Optional[torch.Tensor] = None) -> Tuple[torch.Tensor, torch.Tensor]:
         """
         Decoder forward pass
         
@@ -353,6 +361,7 @@ class DCRNN(nn.Module):
             target_length: Number of steps to predict
             teacher_forcing_ratio: Probability of using teacher forcing
             targets: Ground truth targets for teacher forcing
+            initial_input: Initial decoder input [B, N, input_size] (optional)
             
         Returns:
             outputs: [batch_size, target_length, num_nodes, output_size]
@@ -366,13 +375,20 @@ class DCRNN(nn.Module):
         outputs = []
         attention_weights_list = []
         
-        # Initial decoder input (zeros)
-        decoder_input = torch.zeros(batch_size, num_nodes, self.output_size, device=encoder_outputs.device)
+        # 🔥 Initial decoder input: Encoder의 마지막 입력 사용 (input_size 차원)
+        if initial_input is not None:
+            decoder_input = initial_input  # [B, N, input_size]
+        else:
+            # Fallback: zero tensor with input_size dimension
+            decoder_input = torch.zeros(batch_size, num_nodes, self.input_size, device=encoder_outputs.device)
         
         for t in range(target_length):
-            # Teacher forcing
+            # Teacher forcing: targets를 input_size 차원으로 확장
             if targets is not None and torch.rand(1).item() < teacher_forcing_ratio:
-                decoder_input = targets[:, t]
+                # targets: [B, T, N, output_size] -> [B, N, output_size]
+                target_output = targets[:, t]  # [B, N, output_size=1]
+                # 🔥 output_size를 input_size로 확장
+                decoder_input = self.output_to_input_projection(target_output)  # [B, N, input_size]
             
             # Attention mechanism
             if self.use_attention:
@@ -380,7 +396,7 @@ class DCRNN(nn.Module):
                 attention_weights_list.append(attention_weights)
                 
                 # Context projection to match decoder input size
-                projected_context = self.context_projection(context)
+                projected_context = self.context_projection(context)  # [B, N, input_size]
                 combined_input = decoder_input + projected_context  # Residual connection
             else:
                 combined_input = decoder_input
@@ -393,11 +409,19 @@ class DCRNN(nn.Module):
                 layer_input = self.dropout(hidden_states[i])
             
             # Output projection
-            output = self.output_projection(hidden_states[-1])
+            output = self.output_projection(hidden_states[-1])  # [B, N, output_size]
             outputs.append(output)
             
-            # Next decoder input
-            decoder_input = output
+            # 🔥 Next decoder input: output을 input_size 차원으로 확장
+            # Teacher forcing이 아닐 때만 다음 입력으로 사용 (다양성 확보)
+            if targets is None or torch.rand(1).item() >= teacher_forcing_ratio:
+                decoder_input = self.output_to_input_projection(output)  # [B, N, input_size]
+                
+                # 🔥 디코더 collapse 방지: 예측값에 작은 노이즈 추가 (평가 시에는 제외)
+                if self.training:
+                    noise_scale = 0.005
+                    noise = torch.randn_like(decoder_input) * noise_scale
+                    decoder_input = decoder_input + noise
         
         outputs = torch.stack(outputs, dim=1)  # [B, target_length, N, output_size]
         
@@ -435,16 +459,30 @@ class DCRNN(nn.Module):
             attention_weights: [batch_size, target_length, seq_len] or None
         """
         # 🔥 추가 특성들을 시계열 데이터에 결합
-        if node_features is not None or date_features is not None or time_features is not None:
-            x = self._augment_features(x, node_features, date_features, time_features)
+        # date_features와 time_features는 이미 x에 포함되어 있을 수 있으므로
+        # node_features만 추가하는 것이 안전함
+        if node_features is not None:
+            x = self._augment_features(x, node_features, None, None)
         
         # Encode
         encoder_hidden, encoder_outputs = self.encode(x, adjacency)
         
+        # 🔥 Encoder의 마지막 timestep 입력을 Decoder의 첫 입력으로 사용
+        # 마지막 encoder hidden state를 input_size 차원으로 projection
+        last_encoder_hidden = encoder_hidden[-1]  # [B, N, hidden_size]
+        initial_decoder_input = self.hidden_to_input_projection(last_encoder_hidden)  # [B, N, input_size]
+        
+        # 🔥 디코더 collapse 방지: 초기 입력에 작은 노이즈 추가 (평가 시에는 제외)
+        if self.training:
+            noise_scale = 0.01
+            noise = torch.randn_like(initial_decoder_input) * noise_scale
+            initial_decoder_input = initial_decoder_input + noise
+        
         # Decode
         predictions, attention_weights = self.decode(
             encoder_hidden, encoder_outputs, adjacency, 
-            target_length, teacher_forcing_ratio, targets
+            target_length, teacher_forcing_ratio, targets,
+            initial_input=initial_decoder_input  # 🔥 Decoder 첫 입력으로 전달
         )
         
         return predictions, attention_weights
@@ -473,6 +511,16 @@ class DCRNN(nn.Module):
         if node_features is not None:
             # [B, N, node_dim] → [B, T, N, node_dim]
             node_feat_expanded = node_features.unsqueeze(1).expand(-1, seq_len, -1, -1)
+            
+            # 🔥 Node features 정규화 (스케일이 너무 커서 다른 입력을 압도하는 문제 해결)
+            # Log1p 변환으로 스케일 조정
+            node_feat_expanded = torch.log1p(node_feat_expanded + 1e-6)  # 0 값 방지
+            
+            # 추가 정규화 (평균 0, 표준편차 1 근처로)
+            node_mean = node_feat_expanded.mean(dim=(0, 1, 2), keepdim=True)
+            node_std = node_feat_expanded.std(dim=(0, 1, 2), keepdim=True) + 1e-6
+            node_feat_expanded = (node_feat_expanded - node_mean) / node_std
+            
             augmented_features.append(node_feat_expanded)
         
         # 🔥 날짜 특성 추가 (모든 노드, 모든 시점에 복제)

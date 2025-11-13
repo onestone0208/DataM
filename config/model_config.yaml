@@ -5,9 +5,9 @@
 model:
   name: "DCRNN"
   input_size: 46  # 🔥 2(시계열) + 16(노드) + 21(날짜) + 7(시간) = 46차원
-  hidden_size: 128  # 🔧 64 → 128 (복잡한 패턴 학습 능력 증가)
+  hidden_size: 64   # 🔧 CPU 부하 감소를 위해 128 → 64
   output_size: 2  # occupancy, total_flow
-  num_layers: 3   # 🔧 2 → 3 (더 깊은 네트워크)
+  num_layers: 2   # 🔧 CPU 부하 감소를 위해 3 → 2
   diffusion_steps: 3  # K=3 (논문 기본값)
   use_attention: true
   dropout: 0.2    # 🔧 0.1 → 0.2 (과적합 방지)
@@ -17,9 +17,9 @@ data:
   input_length: 12  # 12시간 입력
   output_length: 1  # 1시간 예측
   input_size: 46  # 🔥 전체 특성 차원 (2+16+21+7)
-  batch_size: 16  # 🔧 CPU 부하 감소를 위해 32 → 16
-  num_workers: 2  # 🔧 CPU 부하 감소를 위해 4 → 2
-  pin_memory: true  # CPU에서는 pin_memory 사용 가능
+  batch_size: 8   # 🔧 CPU 부하 감소를 위해 16 → 8
+  num_workers: 0  # 🔧 CPU 부하 감소를 위해 2 → 0 (멀티프로세싱 비활성화)
+  pin_memory: false  # 🔧 num_workers=0일 때는 pin_memory 불필요
   
   # 데이터 경로
   train_path: "data/train_dataset.pkl"
@@ -70,7 +70,7 @@ scheduler:
 
 # 학습 설정
 training:
-  epochs: 300  # 🔧 200 → 300 (더 오래 학습)
+  epochs: 100  # 🔧 CPU 부하 감소를 위해 300 → 100 (빠른 테스트)
   early_stopping:
     enabled: true
     patience: 20
@@ -79,9 +79,9 @@ training:
   
   # Teacher forcing (디코더 학습 안정화)
   teacher_forcing:
-    initial_ratio: 1.0
-    final_ratio: 0.0  # 🔧 최종 비율 0으로 수정 (평가와 일치)
-    decay_epochs: 10  # 🔥 빠른 감소로 디코더 collapse 방지 (150 → 10)
+    initial_ratio: 0.7  # 🔥 1.0 → 0.7 (collapse 방지)
+    final_ratio: 0.1  # 🔥 0.0 → 0.1 (완전 제거 대신 소량 유지)
+    decay_epochs: 10  # 🔥 빠른 감소로 디코더 collapse 방지
   
   # 그래디언트 클리핑
   gradient_clipping:

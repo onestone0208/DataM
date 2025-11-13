@@ -123,20 +123,23 @@ class SeasonalOccupancyEvaluator:
         
         return test_loader, test_dataset
     
-    def load_model(self) -> DCRNN:
-        """최신 체크포인트에서 모델 로드"""
+    def load_model(self, checkpoint_path: str = None) -> DCRNN:
+        """체크포인트에서 모델 로드"""
         checkpoint_dir = Path("checkpoints/occupancy_model")
         
         if not checkpoint_dir.exists():
             raise FileNotFoundError(f"체크포인트 디렉토리가 없습니다: {checkpoint_dir}")
         
-        # 🔥 무조건 Best 모델 사용 (성능이 가장 좋은 모델)
-        best_model = checkpoint_dir / "best_occupancy_model.pth"
-        
-        if not best_model.exists():
-            raise FileNotFoundError(f"best_occupancy_model.pth not found in {checkpoint_dir}")
-        
-        latest_checkpoint = best_model
+        # 🔥 지정된 체크포인트 사용 또는 Best 모델 사용
+        if checkpoint_path:
+            latest_checkpoint = Path(checkpoint_path)
+            if not latest_checkpoint.exists():
+                raise FileNotFoundError(f"체크포인트 파일을 찾을 수 없습니다: {latest_checkpoint}")
+        else:
+            best_model = checkpoint_dir / "best_occupancy_model.pth"
+            if not best_model.exists():
+                raise FileNotFoundError(f"best_occupancy_model.pth not found in {checkpoint_dir}")
+            latest_checkpoint = best_model
         
         print(f"\n📂 모델 로드: {latest_checkpoint}")
         
@@ -148,31 +151,63 @@ class SeasonalOccupancyEvaluator:
         print(f"  Config Input Size: {model_config['input_size']}")
         print(f"  Config Output Size: {model_config['output_size']}")
         
-        # 🔧 실제 가중치 차원에 맞게 모델 생성 (47차원 입력, 1차원 출력)
+        # 🔥 실제 State Dict에서 차원 확인 (Config가 잘못되었을 수 있음)
+        state_dict = checkpoint['model_state_dict']
+        
+        # Encoder 첫 레이어에서 실제 input_size 확인
+        encoder_key = 'encoder_layers.0.reset_gate_x.weight_forward'
+        if encoder_key in state_dict:
+            actual_input_size = state_dict[encoder_key].shape[1]  # [diffusion_steps, input_size, hidden_size]
+            print(f"  실제 State Dict Input Size: {actual_input_size}")
+        else:
+            actual_input_size = 47  # 기본값
+            print(f"  ⚠️ State Dict에서 확인 불가, 기본값 사용: {actual_input_size}")
+        
+        # Output projection에서 실제 output_size 확인
+        output_key = 'output_projection.weight'
+        if output_key in state_dict:
+            actual_output_size = state_dict[output_key].shape[0]  # [output_size, hidden_size]
+            print(f"  실제 State Dict Output Size: {actual_output_size}")
+        else:
+            actual_output_size = 1  # 기본값
+            print(f"  ⚠️ State Dict에서 확인 불가, 기본값 사용: {actual_output_size}")
+        
+        # 🔧 실제 가중치 차원에 맞게 모델 생성
         model = DCRNN(
-            input_size=47,  # 🔧 시계열(혼잡도+승하차+시간+날짜)(31) + 노드(16) = 47차원
+            input_size=actual_input_size,  # 🔥 실제 State Dict 차원 사용
             hidden_size=model_config['hidden_size'],
-            output_size=1,  # 혼잡도만 출력
+            output_size=actual_output_size,  # 🔥 실제 State Dict 차원 사용
             num_layers=model_config['num_layers'],
             diffusion_steps=model_config['diffusion_steps'],
             use_attention=model_config['use_attention'],
             dropout=model_config['dropout']
         ).to(self.device)
         
-        print(f"  실제 사용: input_size=47, output_size=1")
+        print(f"  실제 사용: input_size={actual_input_size}, output_size={actual_output_size}")
         
-        model.load_state_dict(checkpoint['model_state_dict'])
+        # 🔥 State Dict 로드 (strict=False로 누락된 레이어 허용)
+        missing_keys, unexpected_keys = model.load_state_dict(
+            checkpoint['model_state_dict'], 
+            strict=False
+        )
+        
+        if missing_keys:
+            print(f"  ⚠️ 누락된 키 ({len(missing_keys)}개): {missing_keys[:5]}...")
+            # 누락된 레이어는 랜덤 초기화 상태로 남음 (새로 추가된 레이어일 수 있음)
+        
+        if unexpected_keys:
+            print(f"  ⚠️ 예상치 못한 키 ({len(unexpected_keys)}개): {unexpected_keys[:5]}...")
         model.eval()
         
         return model
     
-    def evaluate(self) -> Dict[str, float]:
+    def evaluate(self, checkpoint_path: str = None) -> Dict[str, float]:
         """모델 평가 실행"""
         print("\n🎯 모델 평가 시작...")
         
         # 데이터 및 모델 로드
         test_loader, test_dataset = self.load_test_dataset()
-        model = self.load_model()
+        model = self.load_model(checkpoint_path=checkpoint_path)
         adjacency_matrix = np.load('data/adjacency_matrix.npy')
         adjacency_tensor = torch.FloatTensor(adjacency_matrix).to(self.device)
         
@@ -342,10 +377,11 @@ class SeasonalOccupancyEvaluator:
 def main():
     parser = argparse.ArgumentParser(description='Evaluate Seasonal Occupancy DCRNN model')
     parser.add_argument('--config', type=str, default='config/model_config.yaml', help='Config file path')
+    parser.add_argument('--checkpoint', type=str, default=None, help='Checkpoint path (default: best_occupancy_model.pth)')
     args = parser.parse_args()
     
     evaluator = SeasonalOccupancyEvaluator(args.config)
-    metrics = evaluator.evaluate()
+    metrics = evaluator.evaluate(checkpoint_path=args.checkpoint)
     
     print("\n✅ 평가 완료!")
 
