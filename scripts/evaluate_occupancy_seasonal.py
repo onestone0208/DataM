@@ -107,13 +107,14 @@ class SeasonalOccupancyEvaluator:
             normalization_stats=normalization_stats
         )
         
-        # DataLoader 생성
+        # DataLoader 생성 (훈련 코드와 동일한 설정 사용)
+        data_config = self.config['data']
         test_loader = DataLoader(
             test_dataset,
-            batch_size=32,
+            batch_size=data_config['batch_size'],  # 🔧 훈련과 동일 (16)
             shuffle=False,
-            num_workers=0,  # CPU에서는 0
-            pin_memory=False
+            num_workers=data_config['num_workers'],  # 🔧 훈련과 동일 (2)
+            pin_memory=data_config['pin_memory']  # 🔧 훈련과 동일
         )
         
         print(f"✅ Test 데이터셋 준비 완료")
@@ -147,9 +148,9 @@ class SeasonalOccupancyEvaluator:
         print(f"  Config Input Size: {model_config['input_size']}")
         print(f"  Config Output Size: {model_config['output_size']}")
         
-        # 🔧 실제 가중치 차원에 맞게 모델 생성 (45차원 입력, 1차원 출력)
+        # 🔧 실제 가중치 차원에 맞게 모델 생성 (47차원 입력, 1차원 출력)
         model = DCRNN(
-            input_size=47,  # 🔧 혼잡도+승차+하차(3) + 추가특성(44) = 47차원
+            input_size=47,  # 🔧 시계열(혼잡도+승하차+시간+날짜)(31) + 노드(16) = 47차원
             hidden_size=model_config['hidden_size'],
             output_size=1,  # 혼잡도만 출력
             num_layers=model_config['num_layers'],
@@ -188,13 +189,12 @@ class SeasonalOccupancyEvaluator:
             for batch_idx, batch in enumerate(test_loader):
                 # 데이터 준비
                 # 데이터 준비 (훈련 코드와 동일)
-                X = batch['X'].to(self.device)  # [B, T, N, 10] - 혼잡도+승하차+시간특성
+                X = batch['X'].to(self.device)  # [B, T, N, 31] - 혼잡도+승하차+시간+날짜
                 Y_raw = batch['Y_raw'].to(self.device)  # [B, N, 1]
                 
-                # 추가 특성들 추출 (시간 특성은 이미 X에 포함됨)
+                # 추가 특성들 추출 (시간/날짜 특성은 이미 X에 포함됨)
                 node_features = batch['node_features'].to(self.device)
-                date_features = batch['date_features'].to(self.device)
-                # time_features는 이미 X에 포함되어 있음
+                # date_features와 time_features는 이미 X에 포함되어 있음
                 
                 # 인접행렬
                 batch_size = X.size(0)
@@ -206,13 +206,25 @@ class SeasonalOccupancyEvaluator:
                     target_length=1,
                     teacher_forcing_ratio=0.0,  # 평가 시 0%
                     node_features=node_features,
-                    date_features=date_features,
+                    date_features=None,  # 🔥 날짜 특성은 X에 포함되어 있음
                     time_features=None  # 🔥 시간 특성은 X에 포함되어 있음
                 )
                 predictions = predictions.squeeze(1)  # [B, N, 1]
                 
+                # 🔍 디버깅: 첫 배치에서만 출력
+                if batch_idx == 0:
+                    print(f"\n🔍 디버깅 정보 (첫 배치):")
+                    print(f"  predictions shape: {predictions.shape}")
+                    print(f"  predictions range (정규화): [{predictions.min().item():.3f}, {predictions.max().item():.3f}]")
+                    print(f"  predictions mean: {predictions.mean().item():.3f}, std: {predictions.std().item():.3f}")
+                
                 # 정규화 해제
                 pred_raw = test_dataset.inverse_transform(predictions)
+                
+                # 🔍 디버깅: 첫 배치에서만 출력
+                if batch_idx == 0:
+                    print(f"  pred_raw range (역변환): [{pred_raw.min().item():.1f}, {pred_raw.max().item():.1f}]명")
+                    print(f"  pred_raw mean: {pred_raw.mean().item():.1f}명")
                 
                 # 결과 저장
                 all_predictions.extend(pred_raw.cpu().numpy().flatten())

@@ -81,7 +81,7 @@ training:
   teacher_forcing:
     initial_ratio: 1.0
     final_ratio: 0.0  # 🔧 최종 비율 0으로 수정 (평가와 일치)
-    decay_epochs: 150  # 🔧 더 점진적 감소 (100 → 150)
+    decay_epochs: 10  # 🔥 빠른 감소로 디코더 collapse 방지 (150 → 10)
   
   # 그래디언트 클리핑
   gradient_clipping:

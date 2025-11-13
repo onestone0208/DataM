@@ -41,6 +41,11 @@ class OccupancyDataset(SubwayGraphDataset):
         else:
             self.boarding_alighting_data = boarding_alighting_data
         
+        # 🔧 원본 DataFrame 저장 (timestep별 특성 생성용)
+        import pandas as pd
+        self.time_features_df = pd.read_csv('data/time_features.csv')
+        self.date_features_df = pd.read_csv('data/date_features.csv')
+        
         # 🔧 승하차 데이터 사전 처리 (성능 최적화)
         self._preprocess_boarding_alighting()
             
@@ -151,6 +156,54 @@ class OccupancyDataset(SubwayGraphDataset):
         except Exception as e:
             # 데이터가 없으면 0 반환
             return 0.0, 0.0
+    
+    def _build_timestep_features(self, sequence: Dict) -> Tuple[torch.Tensor, torch.Tensor]:
+        """
+        🔥 각 timestep별로 정확한 시간/날짜 특성 생성
+        
+        Args:
+            sequence: 시퀀스 정보 (date, start_hour 등)
+            
+        Returns:
+            time_features_seq: [T, time_feat_dim] - 각 timestep별 시간 특성
+            date_features_seq: [T, date_feat_dim] - 각 timestep별 날짜 특성
+        """
+        T = self.sequence_length
+        
+        # 시간 특성 컬럼 (숫자형만)
+        time_feature_cols = ['시간_sin', '시간_cos', '평일_출근시간', '평일_퇴근시간', 
+                            '점심시간', '심야시간', '주간시간']
+        
+        # 날짜 특성 컬럼 (숫자형만, 메타데이터 제외)
+        date_feature_cols = [col for col in self.date_features_df.columns 
+                            if col not in ['date', 'weekday_name', 'holiday_name']]
+        
+        time_features_seq = torch.zeros(T, len(time_feature_cols))
+        date_features_seq = torch.zeros(T, len(date_feature_cols))
+        
+        # 날짜 특성 (하루 단위이므로 동일)
+        date_row = self.date_features_df[self.date_features_df['date'] == sequence['date']]
+        if len(date_row) > 0:
+            date_values = date_row[date_feature_cols].iloc[0].values
+            date_features_seq = torch.tensor(date_values, dtype=torch.float).unsqueeze(0).repeat(T, 1)
+        else:
+            # 날짜가 없으면 0으로 채움
+            date_features_seq = torch.zeros(T, len(date_feature_cols))
+        
+        # 시간 특성 (각 timestep별로 다름)
+        for t in range(T):
+            hour = (sequence['start_hour'] + t) % 24
+            
+            # 시간 특성 lookup
+            time_row = self.time_features_df[self.time_features_df['hour'] == hour]
+            if len(time_row) > 0:
+                time_values = time_row[time_feature_cols].iloc[0].values
+                time_features_seq[t] = torch.tensor(time_values, dtype=torch.float)
+            else:
+                # 시간이 없으면 0으로 채움
+                time_features_seq[t] = torch.zeros(len(time_feature_cols))
+        
+        return time_features_seq, date_features_seq
         
     def __getitem__(self, idx: int) -> Dict[str, torch.Tensor]:
         sample = super().__getitem__(idx)
@@ -184,25 +237,27 @@ class OccupancyDataset(SubwayGraphDataset):
         X_boarding_normalized = torch.sqrt(X_boarding) / 15.0  # 승차 정규화
         X_alighting_normalized = torch.sqrt(X_alighting) / 15.0  # 하차 정규화
         
-        # 🔥 시간 특성을 시계열로 추가
-        time_features_seq = sample['time_features']  # [T, time_feat_dim]
-        T, time_feat_dim = time_features_seq.shape
+        # 🔥 각 timestep별로 정확한 시간/날짜 특성 생성
+        time_features_seq, date_features_seq = self._build_timestep_features(sequence)
+        # time_features_seq: [T, 7], date_features_seq: [T, 21]
         
-        # 시간 특성을 모든 노드에 복제
-        time_features_expanded = time_features_seq.unsqueeze(1).expand(-1, N, -1)  # [T, N, time_feat_dim]
+        # 시간/날짜 특성을 모든 노드에 복제
+        time_features_expanded = time_features_seq.unsqueeze(1).expand(-1, N, -1)  # [T, N, 7]
+        date_features_expanded = date_features_seq.unsqueeze(1).expand(-1, N, -1)  # [T, N, 21]
         
-        # 🔥 혼잡도 + 승차 + 하차 + 시간특성 결합
+        # 🔥 혼잡도 + 승차 + 하차 + 시간특성 + 날짜특성 결합
         X_combined = torch.cat([
             X_occupancy_transformed,  # [T, N, 1] - 혼잡도 (Log1p + 정규화)
             X_boarding_normalized,    # [T, N, 1] - 승차 (sqrt 정규화)
             X_alighting_normalized,   # [T, N, 1] - 하차 (sqrt 정규화)
-            time_features_expanded    # [T, N, 7] - 시간 특성 (시계열)
-        ], dim=-1)  # [T, N, 10]
+            time_features_expanded,   # [T, N, 7] - 시간 특성 (각 timestep별 다름)
+            date_features_expanded    # [T, N, 21] - 날짜 특성 (구조적으로 timestep별)
+        ], dim=-1)  # [T, N, 31]
         
         # 🔥 타겟은 혼잡도만 Log1p + 정규화
         Y_transformed = self._transform_occupancy(Y_occupancy)
         
-        sample['X'] = X_combined  # [T, N, 10] - 혼잡도 + 승하차 + 시간특성
+        sample['X'] = X_combined  # [T, N, 31] - 혼잡도(1) + 승차(1) + 하차(1) + 시간(7) + 날짜(21) = 31
         sample['Y'] = Y_transformed
         
         # 🔥 원본 값도 저장 (loss 계산용)
@@ -421,9 +476,9 @@ class OccupancyTrainer:
         
         model_config = self.config['model']
         
-        # 🔧 시계열에 시간특성 포함 (10 + 16 + 21 = 47차원)
+        # 🔧 시계열에 모든 특성 포함 (31 + 16 = 47차원)
         self.model = DCRNN(
-            input_size=47,  # 🔧 시계열(혼잡도+승하차+시간)(10) + 노드(16) + 날짜(21) = 47차원  
+            input_size=47,  # 🔧 시계열(혼잡도+승하차+시간+날짜)(31) + 노드(16) = 47차원  
             hidden_size=model_config['hidden_size'],
             output_size=1,  # 혼잡도만 출력
             num_layers=model_config['num_layers'],
@@ -519,7 +574,7 @@ class OccupancyTrainer:
                 self.logger.info(f"첫 배치 처리 시작 - X shape: {batch['X'].shape}, Y shape: {batch['Y'].shape}")
             
             # 데이터 준비
-            X = batch['X'].to(self.device)  # [B, T, N, 1] - 혼잡도만
+            X = batch['X'].to(self.device)  # [B, T, N, 31] - 혼잡도+승하차+시간+날짜
             Y = batch['Y'].to(self.device)  # [B, N, 1] - 혼잡도만
             Y_raw = batch['Y_raw'].to(self.device)  # 🔧 디바이스 mismatch 방지
             
@@ -527,10 +582,9 @@ class OccupancyTrainer:
             batch_size = X.size(0)
             adjacency = self.adjacency_matrix.unsqueeze(0).expand(batch_size, -1, -1)
             
-            # 추가 특성들 추출 (시간 특성은 이미 X에 포함됨)
+            # 추가 특성들 추출 (시간/날짜 특성은 이미 X에 포함됨)
             node_features = batch['node_features'].to(self.device)  # [B, N, node_dim]
-            date_features = batch['date_features'].to(self.device)  # [B, date_dim]
-            # time_features는 이미 X에 포함되어 있음
+            # date_features와 time_features는 이미 X에 포함되어 있음
             
             # Forward pass
             predictions, _ = self.model(
@@ -539,11 +593,27 @@ class OccupancyTrainer:
                 teacher_forcing_ratio=teacher_forcing_ratio,
                 targets=Y.unsqueeze(1),  # [B, 1, N, 1]
                 node_features=node_features,
-                date_features=date_features,
+                date_features=None,  # 🔥 날짜 특성은 X에 포함되어 있음
                 time_features=None  # 🔥 시간 특성은 X에 포함되어 있음
             )
             
             predictions = predictions.squeeze(1)  # [B, N, 1]
+            
+            # 🔍 디버깅: 첫 배치에서만 Teacher Forcing 없이 예측
+            if batch_idx == 0 and self.current_epoch == 0:
+                with torch.no_grad():
+                    predictions_no_tf, _ = self.model(
+                        X, adjacency,
+                        target_length=1,
+                        teacher_forcing_ratio=0.0,  # Teacher Forcing 없이
+                        targets=None,
+                        node_features=node_features,
+                        date_features=None,  # 🔥 날짜 특성은 X에 포함되어 있음
+                        time_features=None
+                    )
+                    predictions_no_tf = predictions_no_tf.squeeze(1)
+                    self.logger.info(f"🔍 Teacher Forcing 없이 예측 범위: [{predictions_no_tf.min().item():.3f}, {predictions_no_tf.max().item():.3f}]")
+                    self.logger.info(f"🔍 Teacher Forcing 99%로 예측 범위: [{predictions.min().item():.3f}, {predictions.max().item():.3f}]")
             
             # 예측 범위 업데이트
             pred_min = min(pred_min, predictions.min().item())
@@ -596,17 +666,16 @@ class OccupancyTrainer:
                 batch_size = X.size(0)
                 adjacency = self.adjacency_matrix.unsqueeze(0).expand(batch_size, -1, -1)
                 
-                # 추가 특성들 추출 (시간 특성은 이미 X에 포함됨)
+                # 추가 특성들 추출 (시간/날짜 특성은 이미 X에 포함됨)
                 node_features = batch['node_features'].to(self.device)  # [B, N, node_dim]
-                date_features = batch['date_features'].to(self.device)  # [B, date_dim]
-                # time_features는 이미 X에 포함되어 있음
+                # date_features와 time_features는 이미 X에 포함되어 있음
                 
                 # Forward pass (no teacher forcing)
                 predictions, _ = self.model(
                     X, adjacency, 
                     target_length=1,
                     node_features=node_features,
-                    date_features=date_features,
+                    date_features=None,  # 🔥 날짜 특성은 X에 포함되어 있음
                     time_features=None  # 🔥 시간 특성은 X에 포함되어 있음
                 )
                 predictions = predictions.squeeze(1)
